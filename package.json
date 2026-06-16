@@ -1,0 +1,86 @@
+{
+  "name": "typescribe",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "A local Electron transcript editor for Deepgram-powered timed transcription, speaker review, Cara-style document editing, markers, and exports.",
+  "main": "electron/main.mjs",
+  "author": "Elson",
+  "license": "MIT",
+  "homepage": "https://github.com/justelson/typescribe#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justelson/typescribe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/justelson/typescribe/issues"
+  },
+  "keywords": [
+    "electron",
+    "transcription",
+    "deepgram",
+    "inqscribe",
+    "transcript-editor",
+    "qualitative-research",
+    "srt"
+  ],
+  "scripts": {
+    "dev:web": "vite --host 127.0.0.1",
+    "dev:api": "node --watch server/index.js",
+    "dev:desktop": "npm run build && electron .",
+    "desktop": "npm run build && electron .",
+    "open:desktop": "electron .",
+    "build": "vite build",
+    "build:landing": "node scripts/build-landing.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "check": "node --check server/index.js && node --check electron/main.mjs && node --check electron/preload.mjs && node --check scripts/build-landing.mjs && vite build",
+    "package:dir": "npm run build && electron-builder --dir",
+    "package:win": "npm run build && electron-builder --win nsis",
+    "release:notes": "node scripts/generate-release-notes.mjs"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "express": "latest",
+    "lucide-react": "^1.18.0",
+    "multer": "^2.1.1",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "electron": "^41.3.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.justelson.typescribe",
+    "productName": "TypeScribe",
+    "artifactName": "TypeScribe-Setup-${version}.${ext}",
+    "files": [
+      "dist/**",
+      "electron/**",
+      "server/**",
+      "package.json",
+      "README.md",
+      "LICENSE"
+    ],
+    "directories": {
+      "output": "dist-desktop"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "justelson",
+        "repo": "typescribe"
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}

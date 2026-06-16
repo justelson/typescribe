@@ -1,0 +1,163 @@
+<h1 align="center">TypeScribe</h1>
+
+<p align="center">
+  <strong>A local transcript editor for timed rows, document-style Cara editing, playback sync, markers, and exports.</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/justelson/typescribe">
+    <img src="https://img.shields.io/badge/Repo-typescribe-181717?style=for-the-badge&logo=github" alt="Repository">
+  </a>
+  <img src="https://img.shields.io/badge/Platform-Windows-blue?style=for-the-badge&logo=windows" alt="Windows">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Electron-Desktop-47848F?style=flat-square&logo=electron&logoColor=white" alt="Electron">
+  <img src="https://img.shields.io/badge/React-UI-61DAFB?style=flat-square&logo=react&logoColor=111827" alt="React">
+  <img src="https://img.shields.io/badge/Deepgram-Transcription-13EF93?style=flat-square" alt="Deepgram">
+  <img src="https://img.shields.io/badge/Exports-MD%20%7C%20TXT%20%7C%20SRT%20%7C%20DOC-9cff00?style=flat-square" alt="Exports">
+</p>
+
+---
+
+## Overview
+
+TypeScribe is a local-first Electron app for turning audio into an editable transcript workflow. It combines an InqScribe-style timed row editor with a cleaner document-style **Cara view** for editing paragraphs by speaker while keeping hidden timing data underneath for playback, highlighting, markers, and exports.
+
+It was built for real transcript cleanup work: import audio, transcribe with Deepgram, edit timed rows, switch into a readable document view, add markers, find/replace across the active view, and export exactly the range you need.
+
+## Features
+
+| Feature | What it does |
+| :--- | :--- |
+| **Audio import** | Load local audio into a project and play it in the editor. |
+| **Deepgram transcription** | Send imported audio to Deepgram and convert utterances into timed speaker rows. |
+| **Rows view** | Edit timestamped transcript segments directly. |
+| **Cara view** | Edit speaker-labeled paragraphs without timestamps while preserving hidden timings. |
+| **Playback sync** | Highlight the active row/paragraph while audio plays. |
+| **Markers** | Bookmark transcript positions and use markers as export range boundaries. |
+| **Find/replace** | Search the active editor view: Rows text in Rows view, visible paragraph text in Cara view. |
+| **Speaker tools** | Rename, add, merge, switch, and delete speaker lines. |
+| **Export modal** | Choose range, marker boundaries, output format, and destination. |
+| **Local autosave** | Project edits, layout, view mode, markers, and playback position save locally. |
+| **Desktop shell** | Electron wrapper with native menus and save dialog support. |
+
+## Screens
+
+TypeScribe has three main surfaces:
+
+```text
+Projects
+  ├─ Settings
+  └─ Editor
+       ├─ Player pane
+       ├─ Rows view / Cara view
+       └─ Inspector + markers + export
+```
+
+## Export formats
+
+- Cara Markdown (`.cara.md`)
+- Timed text (`.txt`)
+- SRT subtitles (`.srt`)
+- Word-readable document (`.doc`)
+- Audio clips when `ffmpeg` and a local media directory are configured
+
+## Requirements
+
+- Node.js 18+
+- npm 9+
+- Windows 10/11 for the primary desktop target
+- A Deepgram API key for transcription
+- Optional: `ffmpeg` on PATH for audio clip exports
+
+## Quick start
+
+```bash
+git clone https://github.com/justelson/typescribe.git
+cd typescribe
+npm install
+copy .env.example .env
+```
+
+Add your Deepgram key to `.env`:
+
+```text
+DEEPGRAM_API_KEY=your_key_here
+```
+
+Run the web app and local API in two terminals:
+
+```bash
+npm run dev:web
+npm run dev:api
+```
+
+Run the desktop app:
+
+```bash
+npm run desktop
+```
+
+## Build
+
+```bash
+npm run check
+npm run build
+npm run build:landing
+```
+
+Package a Windows build:
+
+```bash
+npm run package:win
+```
+
+Artifacts are written to `dist-desktop/`.
+
+## Configuration
+
+Environment variables:
+
+| Variable | Purpose |
+| :--- | :--- |
+| `DEEPGRAM_API_KEY` / `DG_API_KEY` | Deepgram authentication token. |
+| `DEEPGRAM_MODEL` | Deepgram model. Defaults to `whisper-large`. |
+| `DEEPGRAM_LANGUAGE` | Optional fixed language. Use `auto`/unset for detection. |
+| `PORT` | Local Express/Electron server port. Defaults to `4177`. |
+| `TYPESCRIBE_MEDIA_DIR` | Optional local folder for audio clip export source files. |
+
+## Project structure
+
+```text
+electron/        Electron main/preload desktop shell
+server/          Local Express API and Deepgram transcription bridge
+src/             React app, editor components, transcript utilities
+landing/         Static OSS landing page source
+docs/            Architecture and release notes
+scripts/         Build/release helper scripts
+```
+
+## Privacy
+
+TypeScribe is local-first, but transcription sends the selected media file to Deepgram when you run transcription. Do not commit private audio, transcripts, `.env`, exported documents, Electron local storage, or generated logs.
+
+Local storage keys currently retain the early `deepgram-scribe:*` names for compatibility with existing local drafts.
+
+## Documentation
+
+- [Architecture](./docs/ARCHITECTURE.md)
+- [Release checklist](./docs/RELEASE.md)
+- [Contributing](./CONTRIBUTING.md)
+- [Security](./SECURITY.md)
+
+## License
+
+MIT. See [LICENSE](./LICENSE).
+
+---
+
+<p align="center">
+  Built for people who need transcript editing to stay close to the audio and still read like a document.
+</p>

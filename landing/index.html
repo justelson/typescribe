@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="TypeScribe is a local Electron transcript editor with Deepgram transcription, timed rows, Cara document view, markers, and exports." />
+    <title>TypeScribe — local transcript editing</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <nav class="nav">
+        <strong>TypeScribe</strong>
+        <div>
+          <a href="https://github.com/justelson/typescribe">GitHub</a>
+          <a href="#features">Features</a>
+          <a href="#download">Build</a>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <p class="eyebrow">Local-first transcript editor</p>
+        <h1>Timed transcription that still edits like a document.</h1>
+        <p class="lede">TypeScribe combines Deepgram transcription, InqScribe-style timed rows, a clean Cara document view, playback sync, markers, and precise range exports in a desktop app.</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/justelson/typescribe">View on GitHub</a>
+          <a class="button" href="#download">Build locally</a>
+        </div>
+      </section>
+
+      <section class="mockup" aria-label="TypeScribe editor preview">
+        <div class="window">
+          <div class="chrome"><span></span><span></span><span></span><strong>DEMO INTERVIEW · Cara view</strong></div>
+          <div class="editor">
+            <aside>
+              <button>▶ Play</button>
+              <button>−1s</button>
+              <button>+1s</button>
+              <div class="bar"><i></i></div>
+              <small>32:31 / 65:46</small>
+            </aside>
+            <article>
+              <p><b>I:</b> What changed after the training?</p>
+              <p class="active"><b>P1:</b> The biggest change is confidence. Before, I would hesitate. Now I can explain the process and keep the person involved.</p>
+              <p><b>I:</b> Was there anything that still felt hard?</p>
+            </article>
+            <aside>
+              <button>Rows</button>
+              <button class="on">Cara</button>
+              <button>Export</button>
+              <div class="marker">● Marker 1</div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="grid">
+        <div><h2>Rows when timing matters</h2><p>Edit timestamped speaker rows, seek by line, and keep playback close to the current transcript segment.</p></div>
+        <div><h2>Cara when reading matters</h2><p>Switch to speaker-labeled paragraphs with no visible timestamps while hidden timings keep export ranges and highlights working.</p></div>
+        <div><h2>Markers for real work</h2><p>Bookmark important transcript positions and use them as range boundaries during export.</p></div>
+        <div><h2>Exports with control</h2><p>Choose start/end, marker range, current playhead, custom timestamps, format, and destination.</p></div>
+      </section>
+
+      <section id="download" class="panel">
+        <h2>Build TypeScribe</h2>
+        <pre><code>git clone https://github.com/justelson/typescribe.git
+cd typescribe
+npm install
+copy .env.example .env
+npm run desktop</code></pre>
+        <p>Add a Deepgram API key to <code>.env</code> to run transcription.</p>
+      </section>
+    </main>
+  </body>
+</html>
