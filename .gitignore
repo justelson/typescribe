@@ -42,5 +42,8 @@ Thumbs.db
 *.swp
 *.swo
 
+# Coordination handoffs
+.coord/
+
 # Misc
 *.tsbuildinfo
