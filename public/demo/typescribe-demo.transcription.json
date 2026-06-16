@@ -1,32 +1,18 @@
-export const seedProjects = [{
-  "id": "demo-interview",
-  "title": "TypeScribe demo interview",
-  "mediaName": "typescribe-demo.mp3",
-  "mediaUrl": "/demo/typescribe-demo.mp3",
-  "duration": "10:12",
-  "updatedAt": "Generated demo",
-  "status": "Ready to edit",
-  "notes": "Synthetic public demo audio transcribed through the TypeScribe Deepgram endpoint. Use Rows for timed edits and Cara view for document-style review.",
+{
+  "success": true,
   "speakers": [
     {
-      "id": "speaker_i",
-      "name": "I"
-    },
-    {
-      "id": "speaker_p1",
-      "name": "P1"
-    },
-    {
-      "id": "speaker_p2",
-      "name": "P2"
+      "id": "speaker_0",
+      "name": "I",
+      "deepgramSpeaker": 0
     }
   ],
   "segments": [
     {
-      "id": "demo_seg_1",
+      "id": "seg_1",
       "startMs": 180,
       "endMs": 1360,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "Welcome to TypeScribe.",
       "words": [
         {
@@ -47,10 +33,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_2",
+      "id": "seg_2",
       "startMs": 2620,
       "endMs": 6960,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "This is a synthetic public demo recording for testing transcript editing.",
       "words": [
         {
@@ -111,10 +97,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_3",
+      "id": "seg_3",
+      "startMs": 8000,
+      "endMs": 8500,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 8000,
+          "endMs": 8500
+        }
+      ]
+    },
+    {
+      "id": "seg_4",
       "startMs": 9140,
       "endMs": 10180,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "thanks for joining.",
       "words": [
         {
@@ -135,10 +135,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_4",
+      "id": "seg_5",
       "startMs": 11040,
       "endMs": 14180,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "I want to understand what changed after the workshop.",
       "words": [
         {
@@ -189,11 +189,11 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_5",
+      "id": "seg_6",
       "startMs": 15400,
       "endMs": 18580,
-      "speakerId": "speaker_p1",
-      "text": "the biggest change is confidence.",
+      "speakerId": "speaker_0",
+      "text": "Participant 1, the biggest change is confidence.",
       "words": [
         {
           "text": "Participant",
@@ -233,10 +233,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_6",
+      "id": "seg_7",
       "startMs": 19780,
       "endMs": 20280,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "Before,",
       "words": [
         {
@@ -247,10 +247,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_7",
+      "id": "seg_8",
       "startMs": 20760,
       "endMs": 24500,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "I would hesitate and ask someone else to handle difficult moments.",
       "words": [
         {
@@ -311,10 +311,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_8",
+      "id": "seg_9",
       "startMs": 25520,
       "endMs": 27160,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "Now I can slow down,",
       "words": [
         {
@@ -345,10 +345,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_9",
+      "id": "seg_10",
       "startMs": 27480,
       "endMs": 28680,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "explain the process,",
       "words": [
         {
@@ -369,10 +369,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_10",
+      "id": "seg_11",
       "startMs": 29220,
       "endMs": 32580,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "and keep the person involved instead of rushing through it.",
       "words": [
         {
@@ -428,10 +428,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_11",
+      "id": "seg_12",
+      "startMs": 33400,
+      "endMs": 33900,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 33400,
+          "endMs": 33900
+        }
+      ]
+    },
+    {
+      "id": "seg_13",
       "startMs": 34540,
       "endMs": 37320,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "was there anything that still felt hard in practice?",
       "words": [
         {
@@ -482,11 +496,11 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_12",
+      "id": "seg_14",
       "startMs": 38480,
       "endMs": 41760,
-      "speakerId": "speaker_p2",
-      "text": "time pressure is still hard.",
+      "speakerId": "speaker_0",
+      "text": "Participant 2, time pressure is still hard.",
       "words": [
         {
           "text": "Participant",
@@ -526,10 +540,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_13",
+      "id": "seg_15",
       "startMs": 42500,
       "endMs": 43700,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "The training helped,",
       "words": [
         {
@@ -550,10 +564,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_14",
+      "id": "seg_16",
       "startMs": 44060,
       "endMs": 47580,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "but busy days make it easy to fall back into old habits.",
       "words": [
         {
@@ -619,10 +633,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_15",
+      "id": "seg_17",
       "startMs": 48560,
       "endMs": 53000,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "The markers help me come back to the exact point where I need to review something.",
       "words": [
         {
@@ -708,10 +722,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_16",
+      "id": "seg_18",
+      "startMs": 54020,
+      "endMs": 54520,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 54020,
+          "endMs": 54520
+        }
+      ]
+    },
+    {
+      "id": "seg_19",
       "startMs": 55160,
       "endMs": 56100,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "that is useful.",
       "words": [
         {
@@ -732,10 +760,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_17",
+      "id": "seg_20",
       "startMs": 57040,
       "endMs": 60980,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "I am going to mark that as something to follow up on in the next session.",
       "words": [
         {
@@ -821,11 +849,11 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_18",
+      "id": "seg_21",
       "startMs": 62160,
       "endMs": 66940,
-      "speakerId": "speaker_p1",
-      "text": "the document view helps because I can read it like a conversation.",
+      "speakerId": "speaker_0",
+      "text": "Participant 1, the document view helps because I can read it like a conversation.",
       "words": [
         {
           "text": "Participant",
@@ -900,10 +928,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_19",
+      "id": "seg_22",
       "startMs": 68240,
       "endMs": 71940,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "The row view helps when I need to check the timing against the audio.",
       "words": [
         {
@@ -979,10 +1007,29 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_20",
+      "id": "seg_23",
+      "startMs": 73080,
+      "endMs": 74120,
+      "speakerId": "speaker_0",
+      "text": "Participant 2,",
+      "words": [
+        {
+          "text": "Participant",
+          "startMs": 73080,
+          "endMs": 73580
+        },
+        {
+          "text": "2,",
+          "startMs": 73620,
+          "endMs": 74120
+        }
+      ]
+    },
+    {
+      "id": "seg_24",
       "startMs": 74440,
       "endMs": 77060,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "export Range control is important too.",
       "words": [
         {
@@ -1018,10 +1065,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_21",
+      "id": "seg_25",
       "startMs": 78400,
       "endMs": 85020,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "Sometimes I only need the section from 1 marker to the end, and sometimes I need a clean document without timestamps.",
       "words": [
         {
@@ -1132,10 +1179,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_22",
+      "id": "seg_26",
+      "startMs": 86400,
+      "endMs": 86900,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 86400,
+          "endMs": 86900
+        }
+      ]
+    },
+    {
+      "id": "seg_27",
       "startMs": 87540,
       "endMs": 88040,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "great.",
       "words": [
         {
@@ -1146,10 +1207,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_23",
+      "id": "seg_28",
       "startMs": 88980,
       "endMs": 91160,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "This demo is Intentionally simple,",
       "words": [
         {
@@ -1180,10 +1241,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_24",
+      "id": "seg_29",
       "startMs": 91500,
       "endMs": 93180,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "but it shows timed rows,",
       "words": [
         {
@@ -1214,10 +1275,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_25",
+      "id": "seg_30",
       "startMs": 93640,
       "endMs": 94580,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "speaker cleanup,",
       "words": [
         {
@@ -1233,10 +1294,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_26",
+      "id": "seg_31",
       "startMs": 95080,
       "endMs": 95840,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "car review,",
       "words": [
         {
@@ -1252,10 +1313,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_27",
+      "id": "seg_32",
       "startMs": 96200,
       "endMs": 97340,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "playback sync,",
       "words": [
         {
@@ -1271,10 +1332,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_28",
+      "id": "seg_33",
       "startMs": 97740,
       "endMs": 98240,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "markers,",
       "words": [
         {
@@ -1285,10 +1346,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_29",
+      "id": "seg_34",
       "startMs": 98800,
       "endMs": 99780,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "find and replace,",
       "words": [
         {
@@ -1309,10 +1370,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_30",
+      "id": "seg_35",
       "startMs": 100320,
       "endMs": 101140,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "and export.",
       "words": [
         {
@@ -1328,10 +1389,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_31",
+      "id": "seg_36",
       "startMs": 102280,
       "endMs": 103300,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "Welcome to TypeScribe.",
       "words": [
         {
@@ -1352,10 +1413,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_32",
+      "id": "seg_37",
       "startMs": 104640,
       "endMs": 108980,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "This is a synthetic public demo recording for testing transcript editing.",
       "words": [
         {
@@ -1416,10 +1477,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_33",
+      "id": "seg_38",
+      "startMs": 109960,
+      "endMs": 110460,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 109960,
+          "endMs": 110460
+        }
+      ]
+    },
+    {
+      "id": "seg_39",
       "startMs": 111180,
       "endMs": 112200,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "thanks for joining.",
       "words": [
         {
@@ -1440,10 +1515,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_34",
+      "id": "seg_40",
       "startMs": 113080,
       "endMs": 116140,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "I want to understand what changed after the workshop.",
       "words": [
         {
@@ -1494,11 +1569,11 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_35",
+      "id": "seg_41",
       "startMs": 117440,
       "endMs": 120560,
-      "speakerId": "speaker_p1",
-      "text": "the biggest change is confidence.",
+      "speakerId": "speaker_0",
+      "text": "Participant 1, the biggest change is confidence.",
       "words": [
         {
           "text": "Participant",
@@ -1538,10 +1613,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_36",
+      "id": "seg_42",
       "startMs": 121780,
       "endMs": 122280,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "Before,",
       "words": [
         {
@@ -1552,10 +1627,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_37",
+      "id": "seg_43",
       "startMs": 122700,
       "endMs": 126540,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "I would hesitate and ask someone else to handle difficult moments.",
       "words": [
         {
@@ -1616,10 +1691,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_38",
+      "id": "seg_44",
       "startMs": 127500,
       "endMs": 129060,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "Now I can slow down,",
       "words": [
         {
@@ -1650,10 +1725,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_39",
+      "id": "seg_45",
       "startMs": 129440,
       "endMs": 130740,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "explain the process,",
       "words": [
         {
@@ -1674,10 +1749,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_40",
+      "id": "seg_46",
       "startMs": 131180,
       "endMs": 134620,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "and keep the person involved instead of rushing through it.",
       "words": [
         {
@@ -1733,10 +1808,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_41",
+      "id": "seg_47",
+      "startMs": 135360,
+      "endMs": 135860,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 135360,
+          "endMs": 135860
+        }
+      ]
+    },
+    {
+      "id": "seg_48",
       "startMs": 136560,
       "endMs": 139260,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "was there anything that still felt hard in practice?",
       "words": [
         {
@@ -1787,10 +1876,29 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_42",
+      "id": "seg_49",
+      "startMs": 140560,
+      "endMs": 141660,
+      "speakerId": "speaker_0",
+      "text": "Participant 2,",
+      "words": [
+        {
+          "text": "Participant",
+          "startMs": 140560,
+          "endMs": 141060
+        },
+        {
+          "text": "2,",
+          "startMs": 141160,
+          "endMs": 141660
+        }
+      ]
+    },
+    {
+      "id": "seg_50",
       "startMs": 141960,
       "endMs": 143740,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "time pressure is still hard.",
       "words": [
         {
@@ -1821,10 +1929,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_43",
+      "id": "seg_51",
       "startMs": 144520,
       "endMs": 145760,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "The training helped,",
       "words": [
         {
@@ -1845,10 +1953,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_44",
+      "id": "seg_52",
       "startMs": 146100,
       "endMs": 149620,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "but busy days make it easy to fall back into old habits.",
       "words": [
         {
@@ -1914,10 +2022,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_45",
+      "id": "seg_53",
       "startMs": 150580,
       "endMs": 154980,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "The markers help me come back to the exact point where I need to review something.",
       "words": [
         {
@@ -2003,10 +2111,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_46",
+      "id": "seg_54",
+      "startMs": 156020,
+      "endMs": 156520,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 156020,
+          "endMs": 156520
+        }
+      ]
+    },
+    {
+      "id": "seg_55",
       "startMs": 157120,
       "endMs": 158100,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "that is useful.",
       "words": [
         {
@@ -2027,10 +2149,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_47",
+      "id": "seg_56",
       "startMs": 159060,
       "endMs": 163000,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "I am going to mark that as something to follow up on in the next session.",
       "words": [
         {
@@ -2116,10 +2238,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_48",
+      "id": "seg_57",
       "startMs": 164140,
       "endMs": 164640,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "Participant",
       "words": [
         {
@@ -2130,10 +2252,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_49",
+      "id": "seg_58",
       "startMs": 165040,
       "endMs": 168940,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "1, the document view helps because I can read it like a conversation.",
       "words": [
         {
@@ -2204,10 +2326,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_50",
+      "id": "seg_59",
       "startMs": 170240,
       "endMs": 173900,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "The row view helps when I need to check the timing against the audio.",
       "words": [
         {
@@ -2283,11 +2405,11 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_51",
+      "id": "seg_60",
       "startMs": 174960,
       "endMs": 179120,
-      "speakerId": "speaker_p2",
-      "text": "export range control is important too.",
+      "speakerId": "speaker_0",
+      "text": "Participant 2, export range control is important too.",
       "words": [
         {
           "text": "Participant",
@@ -2332,10 +2454,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_52",
+      "id": "seg_61",
       "startMs": 180060,
       "endMs": 186980,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "Sometimes I only need the section from 1 marker to the end, and sometimes I need a clean document without timestamps.",
       "words": [
         {
@@ -2446,10 +2568,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_53",
+      "id": "seg_62",
+      "startMs": 188360,
+      "endMs": 188860,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 188360,
+          "endMs": 188860
+        }
+      ]
+    },
+    {
+      "id": "seg_63",
       "startMs": 189560,
       "endMs": 190060,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "great.",
       "words": [
         {
@@ -2460,10 +2596,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_54",
+      "id": "seg_64",
       "startMs": 190960,
       "endMs": 192220,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "This demo is intentionally",
       "words": [
         {
@@ -2489,10 +2625,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_55",
+      "id": "seg_65",
       "startMs": 192660,
       "endMs": 193160,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "simple,",
       "words": [
         {
@@ -2503,10 +2639,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_56",
+      "id": "seg_66",
       "startMs": 193480,
       "endMs": 195180,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "but it shows timed rows,",
       "words": [
         {
@@ -2537,10 +2673,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_57",
+      "id": "seg_67",
       "startMs": 195660,
       "endMs": 196580,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "speaker cleanup,",
       "words": [
         {
@@ -2556,10 +2692,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_58",
+      "id": "seg_68",
       "startMs": 197080,
       "endMs": 197820,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "car review,",
       "words": [
         {
@@ -2575,10 +2711,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_59",
+      "id": "seg_69",
       "startMs": 198180,
       "endMs": 199340,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "playback sync,",
       "words": [
         {
@@ -2594,10 +2730,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_60",
+      "id": "seg_70",
       "startMs": 199700,
       "endMs": 200200,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "markers,",
       "words": [
         {
@@ -2608,10 +2744,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_61",
+      "id": "seg_71",
       "startMs": 200760,
       "endMs": 201800,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "find and replace,",
       "words": [
         {
@@ -2632,10 +2768,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_62",
+      "id": "seg_72",
       "startMs": 202280,
       "endMs": 203040,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "and export.",
       "words": [
         {
@@ -2651,10 +2787,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_63",
+      "id": "seg_73",
       "startMs": 204220,
       "endMs": 205340,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "Welcome to TypeScribe.",
       "words": [
         {
@@ -2675,10 +2811,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_64",
+      "id": "seg_74",
       "startMs": 206600,
       "endMs": 210940,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "This is a synthetic public demo recording for testing transcript editing.",
       "words": [
         {
@@ -2739,10 +2875,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_65",
+      "id": "seg_75",
+      "startMs": 211980,
+      "endMs": 212480,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 211980,
+          "endMs": 212480
+        }
+      ]
+    },
+    {
+      "id": "seg_76",
       "startMs": 213160,
       "endMs": 214200,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "thanks for joining.",
       "words": [
         {
@@ -2763,10 +2913,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_66",
+      "id": "seg_77",
       "startMs": 215080,
       "endMs": 218160,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "I want to understand what changed after the workshop.",
       "words": [
         {
@@ -2817,11 +2967,11 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_67",
+      "id": "seg_78",
       "startMs": 219520,
       "endMs": 222580,
-      "speakerId": "speaker_p1",
-      "text": "the biggest change is confidence.",
+      "speakerId": "speaker_0",
+      "text": "Participant 1, the biggest change is confidence.",
       "words": [
         {
           "text": "Participant",
@@ -2861,10 +3011,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_68",
+      "id": "seg_79",
       "startMs": 223820,
       "endMs": 224320,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "Before,",
       "words": [
         {
@@ -2875,10 +3025,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_69",
+      "id": "seg_80",
       "startMs": 224720,
       "endMs": 228480,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "I would hesitate and ask someone else to handle difficult moments.",
       "words": [
         {
@@ -2939,10 +3089,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_70",
+      "id": "seg_81",
       "startMs": 229540,
       "endMs": 231080,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "Now I can slow down,",
       "words": [
         {
@@ -2973,10 +3123,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_71",
+      "id": "seg_82",
       "startMs": 231440,
       "endMs": 232660,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "explain the process,",
       "words": [
         {
@@ -2997,10 +3147,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_72",
+      "id": "seg_83",
       "startMs": 233200,
       "endMs": 236560,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "and keep the person involved instead of rushing through it.",
       "words": [
         {
@@ -3056,10 +3206,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_73",
+      "id": "seg_84",
+      "startMs": 237400,
+      "endMs": 237900,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 237400,
+          "endMs": 237900
+        }
+      ]
+    },
+    {
+      "id": "seg_85",
       "startMs": 238520,
       "endMs": 241300,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "was there anything that still felt hard in practice?",
       "words": [
         {
@@ -3110,10 +3274,29 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_74",
+      "id": "seg_86",
+      "startMs": 242440,
+      "endMs": 243660,
+      "speakerId": "speaker_0",
+      "text": "Participant 2,",
+      "words": [
+        {
+          "text": "Participant",
+          "startMs": 242440,
+          "endMs": 242940
+        },
+        {
+          "text": "2,",
+          "startMs": 243160,
+          "endMs": 243660
+        }
+      ]
+    },
+    {
+      "id": "seg_87",
       "startMs": 243960,
       "endMs": 245740,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "time pressure is still hard.",
       "words": [
         {
@@ -3144,10 +3327,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_75",
+      "id": "seg_88",
       "startMs": 246520,
       "endMs": 247740,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "The training helped,",
       "words": [
         {
@@ -3168,10 +3351,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_76",
+      "id": "seg_89",
       "startMs": 248120,
       "endMs": 251600,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "but busy days make it easy to fall back into old habits.",
       "words": [
         {
@@ -3237,10 +3420,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_77",
+      "id": "seg_90",
       "startMs": 252540,
       "endMs": 256980,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "The markers help me come back to the exact point where I need to review something.",
       "words": [
         {
@@ -3326,10 +3509,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_78",
+      "id": "seg_91",
+      "startMs": 258040,
+      "endMs": 258540,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 258040,
+          "endMs": 258540
+        }
+      ]
+    },
+    {
+      "id": "seg_92",
       "startMs": 259160,
       "endMs": 260100,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "that is useful.",
       "words": [
         {
@@ -3350,10 +3547,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_79",
+      "id": "seg_93",
       "startMs": 261060,
       "endMs": 265020,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "I am going to mark that as something to follow up on in the next session.",
       "words": [
         {
@@ -3439,11 +3636,11 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_80",
+      "id": "seg_94",
       "startMs": 266120,
       "endMs": 270940,
-      "speakerId": "speaker_p1",
-      "text": "the document view helps because I can read it like a conversation.",
+      "speakerId": "speaker_0",
+      "text": "Participant 1, the document view helps because I can read it like a conversation.",
       "words": [
         {
           "text": "Participant",
@@ -3518,10 +3715,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_81",
+      "id": "seg_95",
       "startMs": 272180,
       "endMs": 275940,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "The row view helps when I need to check the timing against the audio.",
       "words": [
         {
@@ -3597,11 +3794,11 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_82",
+      "id": "seg_96",
       "startMs": 276960,
       "endMs": 281080,
-      "speakerId": "speaker_p2",
-      "text": "export range control is important too.",
+      "speakerId": "speaker_0",
+      "text": "Participant 2, export range control is important too.",
       "words": [
         {
           "text": "Participant",
@@ -3646,10 +3843,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_83",
+      "id": "seg_97",
       "startMs": 281820,
       "endMs": 289020,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "Sometimes I only need the section from 1 marker to the end, and sometimes I need a clean document without timestamps.",
       "words": [
         {
@@ -3760,10 +3957,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_84",
+      "id": "seg_98",
+      "startMs": 290380,
+      "endMs": 290880,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 290380,
+          "endMs": 290880
+        }
+      ]
+    },
+    {
+      "id": "seg_99",
       "startMs": 291560,
       "endMs": 292060,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "great!",
       "words": [
         {
@@ -3774,10 +3985,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_85",
+      "id": "seg_100",
       "startMs": 293000,
       "endMs": 294260,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "This demo is intentionally",
       "words": [
         {
@@ -3803,10 +4014,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_86",
+      "id": "seg_101",
       "startMs": 294640,
       "endMs": 295140,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "simple,",
       "words": [
         {
@@ -3817,10 +4028,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_87",
+      "id": "seg_102",
       "startMs": 295460,
       "endMs": 297180,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "but it shows timed rows,",
       "words": [
         {
@@ -3851,10 +4062,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_88",
+      "id": "seg_103",
       "startMs": 297620,
       "endMs": 298580,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "speaker cleanup,",
       "words": [
         {
@@ -3870,10 +4081,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_89",
+      "id": "seg_104",
       "startMs": 299080,
       "endMs": 299840,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "car review,",
       "words": [
         {
@@ -3889,10 +4100,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_90",
+      "id": "seg_105",
       "startMs": 300240,
       "endMs": 301300,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "Playback Sync,",
       "words": [
         {
@@ -3908,10 +4119,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_91",
+      "id": "seg_106",
       "startMs": 301720,
       "endMs": 302220,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "Markers,",
       "words": [
         {
@@ -3922,10 +4133,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_92",
+      "id": "seg_107",
       "startMs": 302780,
       "endMs": 303760,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "Find and Replace,",
       "words": [
         {
@@ -3946,10 +4157,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_93",
+      "id": "seg_108",
       "startMs": 304340,
       "endMs": 305100,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "and Export.",
       "words": [
         {
@@ -3965,10 +4176,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_94",
+      "id": "seg_109",
       "startMs": 306200,
       "endMs": 307280,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "Welcome to TypeScribe.",
       "words": [
         {
@@ -3989,10 +4200,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_95",
+      "id": "seg_110",
       "startMs": 308600,
       "endMs": 312980,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "This is a synthetic public demo recording for testing transcript editing.",
       "words": [
         {
@@ -4053,10 +4264,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_96",
+      "id": "seg_111",
+      "startMs": 313940,
+      "endMs": 314440,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 313940,
+          "endMs": 314440
+        }
+      ]
+    },
+    {
+      "id": "seg_112",
       "startMs": 315100,
       "endMs": 316160,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "Thanks for joining.",
       "words": [
         {
@@ -4077,10 +4302,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_97",
+      "id": "seg_113",
       "startMs": 317020,
       "endMs": 320140,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "I want to understand what changed after the workshop.",
       "words": [
         {
@@ -4131,11 +4356,11 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_98",
+      "id": "seg_114",
       "startMs": 321400,
       "endMs": 324560,
-      "speakerId": "speaker_p1",
-      "text": "the biggest change is confidence.",
+      "speakerId": "speaker_0",
+      "text": "Participant 1, the biggest change is confidence.",
       "words": [
         {
           "text": "Participant",
@@ -4175,10 +4400,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_99",
+      "id": "seg_115",
       "startMs": 325780,
       "endMs": 326280,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "Before,",
       "words": [
         {
@@ -4189,10 +4414,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_100",
+      "id": "seg_116",
       "startMs": 326680,
       "endMs": 330560,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "I would hesitate and ask someone else to handle difficult moments.",
       "words": [
         {
@@ -4253,10 +4478,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_101",
+      "id": "seg_117",
       "startMs": 331500,
       "endMs": 333100,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "Now I can slow down,",
       "words": [
         {
@@ -4287,10 +4512,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_102",
+      "id": "seg_118",
       "startMs": 333480,
       "endMs": 334660,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "explain the process,",
       "words": [
         {
@@ -4311,10 +4536,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_103",
+      "id": "seg_119",
       "startMs": 335220,
       "endMs": 338600,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "and keep the person involved instead of rushing through it.",
       "words": [
         {
@@ -4370,10 +4595,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_104",
+      "id": "seg_120",
+      "startMs": 339440,
+      "endMs": 339940,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 339440,
+          "endMs": 339940
+        }
+      ]
+    },
+    {
+      "id": "seg_121",
       "startMs": 340580,
       "endMs": 343280,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "was there anything that still felt hard in practice?",
       "words": [
         {
@@ -4424,11 +4663,11 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_105",
+      "id": "seg_122",
       "startMs": 345040,
       "endMs": 347740,
-      "speakerId": "speaker_p2",
-      "text": "time pressure is still hard.",
+      "speakerId": "speaker_0",
+      "text": "Participant 2, time pressure is still hard.",
       "words": [
         {
           "text": "Participant",
@@ -4468,10 +4707,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_106",
+      "id": "seg_123",
       "startMs": 348520,
       "endMs": 353580,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "The training helped, but busy days make it easy to fall back into old habits.",
       "words": [
         {
@@ -4552,10 +4791,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_107",
+      "id": "seg_124",
       "startMs": 354560,
       "endMs": 358980,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "The markers help me come back to the exact point where I need to review something.",
       "words": [
         {
@@ -4641,10 +4880,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_108",
+      "id": "seg_125",
+      "startMs": 360060,
+      "endMs": 360560,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 360060,
+          "endMs": 360560
+        }
+      ]
+    },
+    {
+      "id": "seg_126",
       "startMs": 361120,
       "endMs": 362060,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "that is useful.",
       "words": [
         {
@@ -4665,10 +4918,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_109",
+      "id": "seg_127",
       "startMs": 363060,
       "endMs": 366940,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "I am going to mark that as something to follow up on in the next session.",
       "words": [
         {
@@ -4754,11 +5007,11 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_110",
+      "id": "seg_128",
       "startMs": 368180,
       "endMs": 372940,
-      "speakerId": "speaker_p1",
-      "text": "the document view helps because I can read it like a conversation.",
+      "speakerId": "speaker_0",
+      "text": "Participant 1, the document view helps because I can read it like a conversation.",
       "words": [
         {
           "text": "Participant",
@@ -4833,10 +5086,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_111",
+      "id": "seg_129",
       "startMs": 374180,
       "endMs": 377900,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "The row view helps when I need to check the timing against the audio.",
       "words": [
         {
@@ -4912,11 +5165,11 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_112",
+      "id": "seg_130",
       "startMs": 378940,
       "endMs": 383080,
-      "speakerId": "speaker_p2",
-      "text": "export range control is important too.",
+      "speakerId": "speaker_0",
+      "text": "Participant 2, export range control is important too.",
       "words": [
         {
           "text": "Participant",
@@ -4961,10 +5214,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_113",
+      "id": "seg_131",
       "startMs": 383480,
       "endMs": 383980,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "Sometimes",
       "words": [
         {
@@ -4975,10 +5228,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_114",
+      "id": "seg_132",
       "startMs": 384380,
       "endMs": 390980,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "I only need the section from 1 marker to the end, and sometimes I need a clean document without timestamps.",
       "words": [
         {
@@ -5084,10 +5337,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_115",
+      "id": "seg_133",
+      "startMs": 392440,
+      "endMs": 392940,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 392440,
+          "endMs": 392940
+        }
+      ]
+    },
+    {
+      "id": "seg_134",
       "startMs": 393520,
       "endMs": 394020,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "great.",
       "words": [
         {
@@ -5098,10 +5365,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_116",
+      "id": "seg_135",
       "startMs": 394960,
       "endMs": 396240,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "This demo is intentionally",
       "words": [
         {
@@ -5127,10 +5394,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_117",
+      "id": "seg_136",
       "startMs": 396600,
       "endMs": 397100,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "simple,",
       "words": [
         {
@@ -5141,10 +5408,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_118",
+      "id": "seg_137",
       "startMs": 397440,
       "endMs": 399180,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "but it shows timed rows,",
       "words": [
         {
@@ -5175,10 +5442,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_119",
+      "id": "seg_138",
       "startMs": 399640,
       "endMs": 400580,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "speaker cleanup,",
       "words": [
         {
@@ -5194,10 +5461,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_120",
+      "id": "seg_139",
       "startMs": 401040,
       "endMs": 401820,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "car review,",
       "words": [
         {
@@ -5213,10 +5480,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_121",
+      "id": "seg_140",
       "startMs": 402280,
       "endMs": 403340,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "playback sync,",
       "words": [
         {
@@ -5232,10 +5499,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_122",
+      "id": "seg_141",
       "startMs": 403700,
       "endMs": 404200,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "markers,",
       "words": [
         {
@@ -5246,10 +5513,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_123",
+      "id": "seg_142",
       "startMs": 404760,
       "endMs": 405760,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "find and replace,",
       "words": [
         {
@@ -5270,10 +5537,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_124",
+      "id": "seg_143",
       "startMs": 406320,
       "endMs": 407120,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "and export.",
       "words": [
         {
@@ -5289,10 +5556,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_125",
+      "id": "seg_144",
       "startMs": 408240,
       "endMs": 409340,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "Welcome to TypeScribe.",
       "words": [
         {
@@ -5313,10 +5580,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_126",
+      "id": "seg_145",
       "startMs": 410600,
       "endMs": 414900,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "This is a synthetic public demo recording for testing transcript editing.",
       "words": [
         {
@@ -5377,10 +5644,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_127",
+      "id": "seg_146",
+      "startMs": 415960,
+      "endMs": 416460,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 415960,
+          "endMs": 416460
+        }
+      ]
+    },
+    {
+      "id": "seg_147",
       "startMs": 417180,
       "endMs": 418160,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "thanks for joining.",
       "words": [
         {
@@ -5401,10 +5682,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_128",
+      "id": "seg_148",
       "startMs": 419060,
       "endMs": 422120,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "I want to understand what changed after the workshop.",
       "words": [
         {
@@ -5455,11 +5736,11 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_129",
+      "id": "seg_149",
       "startMs": 423420,
       "endMs": 426640,
-      "speakerId": "speaker_p1",
-      "text": "the biggest change is confidence.",
+      "speakerId": "speaker_0",
+      "text": "Participant 1, the biggest change is confidence.",
       "words": [
         {
           "text": "Participant",
@@ -5499,10 +5780,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_130",
+      "id": "seg_150",
       "startMs": 427760,
       "endMs": 428260,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "Before,",
       "words": [
         {
@@ -5513,10 +5794,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_131",
+      "id": "seg_151",
       "startMs": 428720,
       "endMs": 432540,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "I would hesitate and ask someone else to handle difficult moments.",
       "words": [
         {
@@ -5577,10 +5858,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_132",
+      "id": "seg_152",
       "startMs": 433460,
       "endMs": 435040,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "Now I can slow down,",
       "words": [
         {
@@ -5611,10 +5892,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_133",
+      "id": "seg_153",
       "startMs": 435460,
       "endMs": 436680,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "explain the process,",
       "words": [
         {
@@ -5635,10 +5916,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_134",
+      "id": "seg_154",
       "startMs": 437140,
       "endMs": 440580,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "and keep the person involved instead of rushing through it.",
       "words": [
         {
@@ -5694,10 +5975,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_135",
+      "id": "seg_155",
+      "startMs": 441380,
+      "endMs": 441880,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 441380,
+          "endMs": 441880
+        }
+      ]
+    },
+    {
+      "id": "seg_156",
       "startMs": 442540,
       "endMs": 445260,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "was there anything that still felt hard in practice?",
       "words": [
         {
@@ -5748,11 +6043,11 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_136",
+      "id": "seg_157",
       "startMs": 446500,
       "endMs": 449700,
-      "speakerId": "speaker_p2",
-      "text": "time pressure is still hard.",
+      "speakerId": "speaker_0",
+      "text": "Participant 2, time pressure is still hard.",
       "words": [
         {
           "text": "Participant",
@@ -5792,10 +6087,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_137",
+      "id": "seg_158",
       "startMs": 450480,
       "endMs": 455580,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "The training helped but busy days make it easy to fall back into old habits.",
       "words": [
         {
@@ -5876,10 +6171,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_138",
+      "id": "seg_159",
       "startMs": 456580,
       "endMs": 461020,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "The markers help me come back to the exact point where I need to review something.",
       "words": [
         {
@@ -5965,10 +6260,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_139",
+      "id": "seg_160",
+      "startMs": 461920,
+      "endMs": 462420,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 461920,
+          "endMs": 462420
+        }
+      ]
+    },
+    {
+      "id": "seg_161",
       "startMs": 463080,
       "endMs": 464080,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "that is useful.",
       "words": [
         {
@@ -5989,10 +6298,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_140",
+      "id": "seg_162",
       "startMs": 465060,
       "endMs": 468980,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "I am going to mark that as something to follow up on in the next session.",
       "words": [
         {
@@ -6078,11 +6387,11 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_141",
+      "id": "seg_163",
       "startMs": 470140,
       "endMs": 474900,
-      "speakerId": "speaker_p1",
-      "text": "the document view helps because I can read it like a conversation.",
+      "speakerId": "speaker_0",
+      "text": "Participant 1, the document view helps because I can read it like a conversation.",
       "words": [
         {
           "text": "Participant",
@@ -6157,10 +6466,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_142",
+      "id": "seg_164",
       "startMs": 476200,
       "endMs": 479920,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "The row view helps when I need to check the timing against the audio.",
       "words": [
         {
@@ -6236,11 +6545,11 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_143",
+      "id": "seg_165",
       "startMs": 480900,
       "endMs": 485040,
-      "speakerId": "speaker_p2",
-      "text": "export range control is important too.",
+      "speakerId": "speaker_0",
+      "text": "Participant 2, export range control is important too.",
       "words": [
         {
           "text": "Participant",
@@ -6285,10 +6594,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_144",
+      "id": "seg_166",
       "startMs": 485860,
       "endMs": 492940,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "Sometimes I only need the section from 1 marker to the end, and sometimes I need a clean document without timestamps.",
       "words": [
         {
@@ -6399,10 +6708,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_145",
+      "id": "seg_167",
       "startMs": 495560,
       "endMs": 496060,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "Great.",
       "words": [
         {
@@ -6413,10 +6722,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_146",
+      "id": "seg_168",
       "startMs": 496920,
       "endMs": 498260,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "This demo is intentionally",
       "words": [
         {
@@ -6442,10 +6751,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_147",
+      "id": "seg_169",
       "startMs": 498600,
       "endMs": 501180,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "simple, but it shows timed rows,",
       "words": [
         {
@@ -6481,10 +6790,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_148",
+      "id": "seg_170",
       "startMs": 501560,
       "endMs": 502540,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "speaker cleanup,",
       "words": [
         {
@@ -6500,10 +6809,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_149",
+      "id": "seg_171",
       "startMs": 503080,
       "endMs": 503820,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "car review,",
       "words": [
         {
@@ -6519,10 +6828,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_150",
+      "id": "seg_172",
       "startMs": 504160,
       "endMs": 505260,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "playback sync,",
       "words": [
         {
@@ -6538,10 +6847,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_151",
+      "id": "seg_173",
       "startMs": 505720,
       "endMs": 506220,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "markers,",
       "words": [
         {
@@ -6552,10 +6861,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_152",
+      "id": "seg_174",
       "startMs": 506720,
       "endMs": 507760,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "find and replace,",
       "words": [
         {
@@ -6576,10 +6885,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_153",
+      "id": "seg_175",
       "startMs": 508340,
       "endMs": 509080,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "and export.",
       "words": [
         {
@@ -6595,10 +6904,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_154",
+      "id": "seg_176",
       "startMs": 510180,
       "endMs": 511300,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "Welcome to TypeScribe.",
       "words": [
         {
@@ -6619,10 +6928,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_155",
+      "id": "seg_177",
       "startMs": 512580,
       "endMs": 516940,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "This is a synthetic public demo recording for testing transcript editing.",
       "words": [
         {
@@ -6683,10 +6992,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_156",
+      "id": "seg_178",
+      "startMs": 517960,
+      "endMs": 518460,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 517960,
+          "endMs": 518460
+        }
+      ]
+    },
+    {
+      "id": "seg_179",
       "startMs": 519120,
       "endMs": 520160,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "thanks for joining.",
       "words": [
         {
@@ -6707,10 +7030,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_157",
+      "id": "seg_180",
       "startMs": 521000,
       "endMs": 524140,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "I want to understand what changed after the workshop.",
       "words": [
         {
@@ -6761,11 +7084,11 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_158",
+      "id": "seg_181",
       "startMs": 525380,
       "endMs": 528540,
-      "speakerId": "speaker_p1",
-      "text": "the biggest change is confidence.",
+      "speakerId": "speaker_0",
+      "text": "Participant 1, the biggest change is confidence.",
       "words": [
         {
           "text": "Participant",
@@ -6805,10 +7128,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_159",
+      "id": "seg_182",
       "startMs": 529760,
       "endMs": 530260,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "Before,",
       "words": [
         {
@@ -6819,10 +7142,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_160",
+      "id": "seg_183",
       "startMs": 530740,
       "endMs": 534460,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "I would hesitate and ask someone else to handle difficult moments.",
       "words": [
         {
@@ -6883,10 +7206,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_161",
+      "id": "seg_184",
       "startMs": 535460,
       "endMs": 537100,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "Now I can slow down,",
       "words": [
         {
@@ -6917,10 +7240,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_162",
+      "id": "seg_185",
       "startMs": 537440,
       "endMs": 538680,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "explain the process,",
       "words": [
         {
@@ -6941,10 +7264,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_163",
+      "id": "seg_186",
       "startMs": 539200,
       "endMs": 542540,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "and keep the person involved instead of rushing through it.",
       "words": [
         {
@@ -7000,10 +7323,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_164",
+      "id": "seg_187",
+      "startMs": 543380,
+      "endMs": 543880,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 543380,
+          "endMs": 543880
+        }
+      ]
+    },
+    {
+      "id": "seg_188",
       "startMs": 544540,
       "endMs": 547260,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "was there anything that still felt hard in practice?",
       "words": [
         {
@@ -7054,11 +7391,11 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_165",
+      "id": "seg_189",
       "startMs": 548440,
       "endMs": 551720,
-      "speakerId": "speaker_p2",
-      "text": "time pressure is still hard.",
+      "speakerId": "speaker_0",
+      "text": "Participant 2, time pressure is still hard.",
       "words": [
         {
           "text": "Participant",
@@ -7098,10 +7435,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_166",
+      "id": "seg_190",
       "startMs": 552440,
       "endMs": 553700,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "The training helped,",
       "words": [
         {
@@ -7122,10 +7459,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_167",
+      "id": "seg_191",
       "startMs": 554040,
       "endMs": 557580,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "but busy days make it easy to fall back into old habits.",
       "words": [
         {
@@ -7191,10 +7528,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_168",
+      "id": "seg_192",
       "startMs": 558560,
       "endMs": 563000,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "The markers help me come back to the exact point where I need to review something.",
       "words": [
         {
@@ -7280,10 +7617,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_169",
+      "id": "seg_193",
+      "startMs": 564000,
+      "endMs": 564500,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 564000,
+          "endMs": 564500
+        }
+      ]
+    },
+    {
+      "id": "seg_194",
       "startMs": 565120,
       "endMs": 566100,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "that is useful.",
       "words": [
         {
@@ -7304,10 +7655,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_170",
+      "id": "seg_195",
       "startMs": 567040,
       "endMs": 570920,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "I am going to mark that as something to follow up on in the next session.",
       "words": [
         {
@@ -7393,11 +7744,11 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_171",
+      "id": "seg_196",
       "startMs": 572160,
       "endMs": 576920,
-      "speakerId": "speaker_p1",
-      "text": "the document view helps because I can read it like a conversation.",
+      "speakerId": "speaker_0",
+      "text": "Participant 1, the document view helps because I can read it like a conversation.",
       "words": [
         {
           "text": "Participant",
@@ -7472,10 +7823,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_172",
+      "id": "seg_197",
       "startMs": 578160,
       "endMs": 581880,
-      "speakerId": "speaker_p1",
+      "speakerId": "speaker_0",
       "text": "The row view helps when I need to check the timing against the audio.",
       "words": [
         {
@@ -7551,11 +7902,11 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_173",
+      "id": "seg_198",
       "startMs": 582980,
       "endMs": 587060,
-      "speakerId": "speaker_p2",
-      "text": "export range control is important too.",
+      "speakerId": "speaker_0",
+      "text": "Participant 2, export range control is important too.",
       "words": [
         {
           "text": "Participant",
@@ -7600,10 +7951,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_174",
+      "id": "seg_199",
       "startMs": 587860,
       "endMs": 594980,
-      "speakerId": "speaker_p2",
+      "speakerId": "speaker_0",
       "text": "Sometimes I only need the section from 1 marker to the end, and sometimes I need a clean document without timestamps.",
       "words": [
         {
@@ -7714,10 +8065,24 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_175",
+      "id": "seg_200",
+      "startMs": 596380,
+      "endMs": 596880,
+      "speakerId": "speaker_0",
+      "text": "Interviewer,",
+      "words": [
+        {
+          "text": "Interviewer,",
+          "startMs": 596380,
+          "endMs": 596880
+        }
+      ]
+    },
+    {
+      "id": "seg_201",
       "startMs": 597540,
       "endMs": 598040,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "great.",
       "words": [
         {
@@ -7728,10 +8093,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_176",
+      "id": "seg_202",
       "startMs": 598940,
       "endMs": 601100,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "This demo is Intentionally simple,",
       "words": [
         {
@@ -7762,10 +8127,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_177",
+      "id": "seg_203",
       "startMs": 601460,
       "endMs": 603140,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "but it shows timed rows",
       "words": [
         {
@@ -7796,10 +8161,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_178",
+      "id": "seg_204",
       "startMs": 603660,
       "endMs": 604540,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "speaker cleanup",
       "words": [
         {
@@ -7815,10 +8180,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_179",
+      "id": "seg_205",
       "startMs": 605020,
       "endMs": 605820,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "car review",
       "words": [
         {
@@ -7834,10 +8199,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_180",
+      "id": "seg_206",
       "startMs": 606220,
       "endMs": 607320,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "playback sync",
       "words": [
         {
@@ -7853,10 +8218,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_181",
+      "id": "seg_207",
       "startMs": 607700,
       "endMs": 608200,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "markers",
       "words": [
         {
@@ -7867,10 +8232,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_182",
+      "id": "seg_208",
       "startMs": 608720,
       "endMs": 609740,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "find and replace",
       "words": [
         {
@@ -7891,10 +8256,10 @@ export const seedProjects = [{
       ]
     },
     {
-      "id": "demo_seg_183",
+      "id": "seg_209",
       "startMs": 610160,
       "endMs": 611160,
-      "speakerId": "speaker_i",
+      "speakerId": "speaker_0",
       "text": "and export",
       "words": [
         {
@@ -7910,38 +8275,6 @@ export const seedProjects = [{
       ]
     }
   ],
-  "markers": [
-    {
-      "id": "marker_demo_1",
-      "segmentId": "demo_seg_35",
-      "ratio": 0.8205128205128205,
-      "caretIndex": null,
-      "color": "#ffd166",
-      "label": "Confidence and document view"
-    },
-    {
-      "id": "marker_demo_2",
-      "segmentId": "demo_seg_89",
-      "ratio": 1,
-      "caretIndex": null,
-      "color": "#5ad7ff",
-      "label": "Export range discussion"
-    },
-    {
-      "id": "marker_demo_3",
-      "segmentId": "demo_seg_142",
-      "ratio": 1,
-      "caretIndex": null,
-      "color": "#ff7ab6",
-      "label": "Final review loop"
-    }
-  ]
-}];
-
-export const settingDefaults = {
-  model: 'whisper-large',
-  language: 'Detect automatically',
-  diarization: true,
-  exportFormat: 'Cara MD + SRT',
-  wordFollow: false,
-};
+  "durationSeconds": 612.0228,
+  "requestId": "019ed1a2-7137-7c91-bf88-59ef55a12517"
+}

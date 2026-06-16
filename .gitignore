@@ -24,11 +24,13 @@ yarn-error.log*
 # Local app data / generated exports
 *.tmp
 *.temp
+tmp/
 *.mp3
 *.wav
 *.m4a
 *.mp4
 *.mov
+!public/demo/*.mp3
 *.srt.local
 *.doc.local
 

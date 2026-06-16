@@ -22,6 +22,7 @@ const mediaDir = process.env.TYPESCRIBE_MEDIA_DIR || path.join(tempRoot, 'media'
 app.use(express.json({ limit: '2mb' }));
 app.use('/assets', express.static(path.join(clientDistDir, 'assets')));
 app.use('/fonts', express.static(path.join(clientDistDir, 'fonts')));
+app.use('/demo', express.static(path.join(clientDistDir, 'demo')));
 app.get('/', (_req, res) => res.sendFile(path.join(clientDistDir, 'index.html')));
 app.get('/projects', (_req, res) => res.sendFile(path.join(clientDistDir, 'index.html')));
 app.get('/settings', (_req, res) => res.sendFile(path.join(clientDistDir, 'index.html')));
