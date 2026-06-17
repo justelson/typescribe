@@ -3,6 +3,10 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { formatTime } from '../utils/transcript.js';
 import { SpeakerMenu } from './SpeakerMenu.jsx';
 
+const ROW_WINDOW_SIZE = 140;
+const CARA_WINDOW_SIZE = 70;
+const LONG_TRANSCRIPT_THRESHOLD = 180;
+
 export function TranscriptTable({
   project,
   viewMode,
@@ -36,8 +40,18 @@ export function TranscriptTable({
   const programmaticScrollRef = useRef(false);
   const didInitialPositionRef = useRef(false);
   const [layoutReady, setLayoutReady] = useState(false);
+  const [rowWindowStart, setRowWindowStart] = useState(0);
+  const [caraWindowStart, setCaraWindowStart] = useState(0);
   const karaGroups = useMemo(() => makeCaraGroups(project.segments), [project.segments]);
   const markerPositions = useMemo(() => makeMarkerPositions(project), [project]);
+  const activeRowIndex = useMemo(() => Math.max(0, project.segments.findIndex((segment) => segment.id === activeSegmentId)), [project.segments, activeSegmentId]);
+  const activeCaraIndex = useMemo(() => Math.max(0, karaGroups.findIndex((group) => group.segments.some((segment) => segment.id === activeSegmentId))), [karaGroups, activeSegmentId]);
+  const rowsAreWindowed = project.segments.length > LONG_TRANSCRIPT_THRESHOLD;
+  const caraIsWindowed = karaGroups.length > LONG_TRANSCRIPT_THRESHOLD;
+  const rowWindow = useMemo(() => makeWindow(project.segments, rowWindowStart, ROW_WINDOW_SIZE), [project.segments, rowWindowStart]);
+  const caraWindow = useMemo(() => makeWindow(karaGroups, caraWindowStart, CARA_WINDOW_SIZE), [karaGroups, caraWindowStart]);
+  const visibleSegments = rowsAreWindowed ? rowWindow.items : project.segments;
+  const visibleCaraGroups = caraIsWindowed ? caraWindow.items : karaGroups;
 
   useEffect(() => {
     setLayoutReady(false);
@@ -51,7 +65,23 @@ export function TranscriptTable({
       window.cancelAnimationFrame(secondFrame);
     };
     didInitialPositionRef.current = false;
+    setRowWindowStart(0);
+    setCaraWindowStart(0);
   }, [project.id, viewMode]);
+
+  useEffect(() => {
+    if (!rowsAreWindowed || viewMode !== 'rows') return;
+    if (activeRowIndex < rowWindow.start || activeRowIndex >= rowWindow.end) {
+      setRowWindowStart(centerWindowStart(activeRowIndex, project.segments.length, ROW_WINDOW_SIZE));
+    }
+  }, [activeRowIndex, project.segments.length, rowWindow.start, rowWindow.end, rowsAreWindowed, viewMode]);
+
+  useEffect(() => {
+    if (!caraIsWindowed || viewMode !== 'kara') return;
+    if (activeCaraIndex < caraWindow.start || activeCaraIndex >= caraWindow.end) {
+      setCaraWindowStart(centerWindowStart(activeCaraIndex, karaGroups.length, CARA_WINDOW_SIZE));
+    }
+  }, [activeCaraIndex, karaGroups.length, caraWindow.start, caraWindow.end, caraIsWindowed, viewMode]);
 
   useEffect(() => {
     if (!layoutReady || !autoSync || !activeSegmentId) return undefined;
@@ -104,7 +134,18 @@ export function TranscriptTable({
           <span>Cara view · Simple default editing view. Speaker labels only.</span>
         </div>
         <div className="kara-plain-editor" ref={rowsRef} onScroll={handleScroll} onWheel={handleScroll}>
-          {karaGroups.map((group) => {
+          {caraIsWindowed && (
+            <TranscriptWindowBar
+              start={caraWindow.start}
+              end={caraWindow.end}
+              total={karaGroups.length}
+              label="Cara paragraphs"
+              onPrevious={() => setCaraWindowStart((value) => Math.max(0, value - CARA_WINDOW_SIZE))}
+              onNext={() => setCaraWindowStart((value) => Math.min(Math.max(0, karaGroups.length - CARA_WINDOW_SIZE), value + CARA_WINDOW_SIZE))}
+              onActive={() => setCaraWindowStart(centerWindowStart(activeCaraIndex, karaGroups.length, CARA_WINDOW_SIZE))}
+            />
+          )}
+          {visibleCaraGroups.map((group) => {
             const active = group.segments.some((segment) => segment.id === activeSegmentId);
             return (
               <CaraPlainBlock
@@ -159,7 +200,18 @@ export function TranscriptTable({
         <span>Timecode</span><span>Speaker</span><span>Transcript</span><span></span>
       </div>
       <div className="transcript-rows" ref={rowsRef} onScroll={handleScroll} onWheel={handleScroll}>
-        {project.segments.map((segment) => (
+        {rowsAreWindowed && (
+          <TranscriptWindowBar
+            start={rowWindow.start}
+            end={rowWindow.end}
+            total={project.segments.length}
+            label="Rows"
+            onPrevious={() => setRowWindowStart((value) => Math.max(0, value - ROW_WINDOW_SIZE))}
+            onNext={() => setRowWindowStart((value) => Math.min(Math.max(0, project.segments.length - ROW_WINDOW_SIZE), value + ROW_WINDOW_SIZE))}
+            onActive={() => setRowWindowStart(centerWindowStart(activeRowIndex, project.segments.length, ROW_WINDOW_SIZE))}
+          />
+        )}
+        {visibleSegments.map((segment) => (
           <TranscriptRow
             key={segment.id}
             refCallback={(node) => {
@@ -197,6 +249,29 @@ function LoadingOverlay({ label }) {
     <div className="main-loading-overlay" role="status" aria-live="polite">
       <span className="loading-dot" />
       <strong>{label}</strong>
+    </div>
+  );
+}
+
+function makeWindow(items, start, size) {
+  const safeStart = Math.min(Math.max(0, start), Math.max(0, items.length - size));
+  const end = Math.min(items.length, safeStart + size);
+  return { start: safeStart, end, items: items.slice(safeStart, end) };
+}
+
+function centerWindowStart(index, total, size) {
+  return Math.min(Math.max(0, index - Math.floor(size / 2)), Math.max(0, total - size));
+}
+
+function TranscriptWindowBar({ start, end, total, label, onPrevious, onNext, onActive }) {
+  return (
+    <div className="transcript-window-bar">
+      <span>{label} {start + 1}–{end} of {total}</span>
+      <div>
+        <button type="button" onClick={onPrevious} disabled={start <= 0}>Previous chunk</button>
+        <button type="button" onClick={onActive}>Current</button>
+        <button type="button" onClick={onNext} disabled={end >= total}>Next chunk</button>
+      </div>
     </div>
   );
 }

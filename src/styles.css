@@ -608,6 +608,22 @@ body.is-resizing .pane-resizer::before { background: var(--green); }
 }
 .transcript-head span { display: flex; align-items: center; padding: 0 7px; border-right: 1px solid var(--line-soft); }
 .transcript-rows { min-height: 0; overflow: auto; }
+.transcript-window-bar {
+  position: sticky;
+  top: 0;
+  z-index: 12;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--line);
+  background: #181c17;
+  color: var(--muted);
+  font: 0.72rem/1 var(--font-mono);
+}
+.transcript-window-bar div { display: flex; gap: 5px; }
+.transcript-window-bar button { min-height: 24px; padding: 3px 7px; font-size: 0.68rem; }
 .transcript-row {
   position: relative;
   min-height: 52px;
