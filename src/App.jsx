@@ -37,18 +37,18 @@ export function App() {
   const desktopApi = typeof window !== 'undefined' ? window.deepgramScribeDesktop : null;
   const saved = useMemo(safeReadState, []);
   const initialRoute = routeFromPath();
-  const initialSelectedId = initialRoute?.selectedId || saved.selectedId || seedProjects[0]?.id || null;
-  const [screen, setScreen] = useState(initialRoute?.screen || (initialSelectedId ? 'editor' : 'home'));
+  const initialSelectedId = initialRoute?.selectedId || saved.selectedId || null;
+  const [screen, setScreen] = useState(initialRoute?.screen || 'home');
   const [projects, setProjects] = useState(saved.projects?.length ? saved.projects : seedProjects);
   const [selectedId, setSelectedId] = useState(initialSelectedId);
   const [settings, setSettings] = useState({ ...settingDefaults, ...(saved.settings || {}) });
   const [history, setHistory] = useState({ past: [], future: [] });
   const documentSaveTimersRef = useRef(new Map());
-  const selectedProject = projects.find((project) => project.id === selectedId) || projects[0] || null;
+  const selectedProject = projects.find((project) => project.id === selectedId) || null;
 
   useEffect(() => {
     function onPopState() {
-      const route = routeFromPath() || { screen: 'editor', selectedId: saved.selectedId || seedProjects[0]?.id || null };
+      const route = routeFromPath() || { screen: 'home', selectedId: null };
       setScreen(route.screen);
       if (route.selectedId) setSelectedId(route.selectedId);
       if (route.screen !== 'editor') setSelectedId(route.selectedId);
