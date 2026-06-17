@@ -1,5 +1,5 @@
 import { Copy, Minus, Square, X } from 'lucide-react';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { EditorView } from './components/EditorView.jsx';
 import { HomeView } from './components/HomeView.jsx';
 import { SettingsView } from './components/SettingsView.jsx';
@@ -43,6 +43,7 @@ export function App() {
   const [selectedId, setSelectedId] = useState(initialSelectedId);
   const [settings, setSettings] = useState({ ...settingDefaults, ...(saved.settings || {}) });
   const [history, setHistory] = useState({ past: [], future: [] });
+  const documentSaveTimersRef = useRef(new Map());
   const selectedProject = projects.find((project) => project.id === selectedId) || projects[0] || null;
 
   useEffect(() => {
@@ -63,6 +64,29 @@ export function App() {
       selectedId,
     }));
   }, [projects, settings, selectedId]);
+
+  useEffect(() => {
+    let cancelled = false;
+    async function loadLocalProjectDocuments() {
+      try {
+        const response = await fetch('/api/local-projects');
+        const payload = await response.json().catch(() => ({}));
+        if (!response.ok || payload.success === false || cancelled) return;
+        const docs = Array.isArray(payload.projects) ? payload.projects : [];
+        if (!docs.length) return;
+        setProjects((items) => {
+          const docIds = new Set(docs.map((project) => project.id));
+          return [...docs, ...items.filter((project) => !docIds.has(project.id))];
+        });
+      } catch {
+        // Local document loading is best-effort; the bundled demo still works offline.
+      }
+    }
+    loadLocalProjectDocuments();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   function navigate(path, nextScreen, nextSelectedId = null) {
     window.history.pushState({}, '', path);
@@ -90,6 +114,25 @@ export function App() {
       }
       return nextItems;
     });
+    scheduleProjectDocumentSave(nextProject);
+  }
+
+  function scheduleProjectDocumentSave(project) {
+    if (!project?.localDocument) return;
+    const timers = documentSaveTimersRef.current;
+    window.clearTimeout(timers.get(project.id));
+    const timer = window.setTimeout(async () => {
+      try {
+        await fetch(`/api/local-projects/${encodeURIComponent(project.id)}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ project: sanitizeProjects([project])[0] }),
+        });
+      } catch {
+        // Document saves are retried on the next project update.
+      }
+    }, 500);
+    timers.set(project.id, timer);
   }
 
   function undoProjectChange() {

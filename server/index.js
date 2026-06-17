@@ -17,12 +17,15 @@ const port = Number(process.env.PORT || 4177);
 const userHome = process.env.USERPROFILE || process.env.HOME || process.cwd();
 const tempRoot = path.join(userHome, 'AppData', 'Local', 'Temp', 'typescribe');
 const upload = multer({ dest: path.join(tempRoot, 'uploads') });
-const mediaDir = process.env.TYPESCRIBE_MEDIA_DIR || path.join(tempRoot, 'media');
+const documentsRoot = path.join(userHome, 'Documents', 'TypeScribe');
+const mediaDir = process.env.TYPESCRIBE_MEDIA_DIR || path.join(documentsRoot, 'media');
+const projectDocsDir = path.join(documentsRoot, 'projects');
 
 app.use(express.json({ limit: '2mb' }));
 app.use('/assets', express.static(path.join(clientDistDir, 'assets')));
 app.use('/fonts', express.static(path.join(clientDistDir, 'fonts')));
 app.use('/demo', express.static(path.join(clientDistDir, 'demo')));
+app.use('/media/local', express.static(mediaDir));
 app.get('/', (_req, res) => res.sendFile(path.join(clientDistDir, 'index.html')));
 app.get('/projects', (_req, res) => res.sendFile(path.join(clientDistDir, 'index.html')));
 app.get('/settings', (_req, res) => res.sendFile(path.join(clientDistDir, 'index.html')));
@@ -100,6 +103,26 @@ function safeFilename(value) {
     .replace(/\s+/g, ' ')
     .trim()
     .slice(0, 120) || 'audio-clip';
+}
+
+function safeProjectDocName(projectId) {
+  return `${String(projectId || 'project')
+    .replace(/[^a-z0-9._-]+/gi, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 90) || 'project'}.typescribe.json`;
+}
+
+function publicProject(project, filename) {
+  return {
+    ...project,
+    localDocument: true,
+    documentName: filename,
+  };
+}
+
+function serializableProject(project) {
+  const { mediaFile, ...rest } = project || {};
+  return rest;
 }
 
 function deepgramUrl() {
@@ -215,6 +238,46 @@ app.get('/api/projects', (_req, res) => {
       },
     ],
   });
+});
+
+app.get('/api/local-projects', async (_req, res) => {
+  try {
+    await fs.mkdir(projectDocsDir, { recursive: true });
+    const entries = await fs.readdir(projectDocsDir, { withFileTypes: true });
+    const projects = [];
+    for (const entry of entries) {
+      if (!entry.isFile() || !entry.name.endsWith('.typescribe.json')) continue;
+      const filePath = path.join(projectDocsDir, entry.name);
+      try {
+        const project = JSON.parse(await fs.readFile(filePath, 'utf8'));
+        if (project?.id && Array.isArray(project?.segments)) projects.push(publicProject(project, entry.name));
+      } catch {
+        // Skip malformed local docs instead of blocking the app.
+      }
+    }
+    res.json({ success: true, projects });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error instanceof Error ? error.message : 'Failed to load local project documents.' });
+  }
+});
+
+app.post('/api/local-projects/:projectId', async (req, res) => {
+  try {
+    await fs.mkdir(projectDocsDir, { recursive: true });
+    const project = serializableProject(req.body?.project);
+    if (!project?.id || project.id !== req.params.projectId || !Array.isArray(project.segments)) {
+      throw new Error('A valid TypeScribe project document is required.');
+    }
+    const filename = project.documentName && String(project.documentName).endsWith('.typescribe.json')
+      ? path.basename(project.documentName)
+      : safeProjectDocName(project.id);
+    const outputPath = path.join(projectDocsDir, filename);
+    const toWrite = serializableProject({ ...project, localDocument: true, documentName: filename });
+    await fs.writeFile(outputPath, `${JSON.stringify(toWrite, null, 2)}\n`, 'utf8');
+    res.json({ success: true, project: publicProject(toWrite, filename), path: outputPath });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error instanceof Error ? error.message : 'Failed to save local project document.' });
+  }
 });
 
 export async function startServer(options = {}) {
