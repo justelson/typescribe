@@ -1,0 +1,291 @@
+/* Visual anatomy: footer.design/sites/breaver-studios. Original TypeScribe art. */
+@font-face {
+  font-family: 'Patriot TypeScribe';
+  src: url('/assets/fonts/patriot-bold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+.site-footer {
+  overflow: hidden;
+  background: var(--footer-join-background, transparent);
+  color: var(--cream);
+}
+
+.site-footer-illustration {
+  position: relative;
+  height: clamp(220px, 25vw, 400px);
+  overflow: hidden;
+  background: transparent;
+}
+
+.site-footer-illustration img {
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  width: max(100%, 880px);
+  max-width: none;
+  height: auto;
+  transform: translateX(-50%);
+}
+
+.site-footer-body {
+  padding: 18px 24px 0;
+  background: var(--forest);
+}
+
+.site-footer-middle {
+  display: grid;
+  width: min(100%, 1600px);
+  grid-template-columns: minmax(180px, 1fr) minmax(280px, 1.3fr) minmax(220px, 1fr);
+  gap: 44px;
+  align-items: start;
+  margin: 0 auto;
+  padding: 22px 8px 52px;
+}
+
+.site-footer h2 {
+  margin: 0;
+  color: var(--cream);
+  font: 700 1.15rem/1.2 var(--font-sans);
+  letter-spacing: -0.03em;
+}
+
+.site-footer-navigation ul {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer-navigation a {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  color: var(--cream);
+  font: 500 0.95rem/1.35 var(--font-sans);
+  text-decoration: none;
+  text-underline-offset: 4px;
+}
+
+.site-footer-navigation a:hover {
+  color: var(--yellow);
+  text-decoration: underline;
+}
+
+.site-footer-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.site-footer-message p {
+  max-width: 40ch;
+  margin: 15px 0 20px;
+  color: #dce2d0;
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+.site-footer-download {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border: 1px solid var(--cream);
+  border-radius: 99px;
+  background: var(--cream);
+  color: var(--forest);
+  font: 750 0.85rem/1.3 var(--font-sans);
+  text-decoration: none;
+  transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.site-footer-download svg {
+  flex: none;
+}
+
+.site-footer-download:hover {
+  border-color: var(--yellow);
+  background: var(--yellow);
+  transform: translateY(-2px);
+}
+
+.site-footer-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.site-footer-utilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.site-footer-utilities a {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--cream);
+  color: var(--forest);
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.site-footer-utilities a:hover {
+  background: var(--yellow);
+  transform: translateY(-2px);
+}
+
+.site-footer-copyright {
+  margin: 17px 0 0;
+  color: var(--cream);
+  font: 650 0.82rem/1.45 var(--font-sans);
+}
+
+.site-footer-meta {
+  max-width: 280px;
+  margin: 6px 0 0;
+  color: #c7d6cc;
+  font: 500 0.73rem/1.45 var(--font-sans);
+}
+
+.site-footer-license {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 5px 10px;
+  border: 1px solid rgba(248, 237, 207, 0.55);
+  border-radius: 4px;
+  color: var(--cream);
+  font: 500 0.73rem/1.3 var(--font-sans);
+  text-decoration: none;
+}
+
+.site-footer-license:hover {
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+
+.site-footer-boundary {
+  max-width: 30ch;
+  margin: 12px 0 0;
+  color: #c7d6cc;
+  font: 500 0.66rem/1.65 var(--font-mono);
+}
+
+.site-footer-wordmark {
+  display: flex;
+  min-height: 44px;
+  align-items: flex-end;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  color: var(--cream);
+  /* Patriot Bold advances 5.436em; this ratio retains space for tracking and ink. */
+  font: 700 min(calc((100vw - 48px) * 0.185), 296px)/1 'Patriot TypeScribe', var(--font-poster);
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 160ms ease;
+}
+
+.site-footer-wordmark-ink {
+  display: block;
+  height: 0.69em;
+  overflow: hidden;
+  /* Keep the top 70% of Patriot's caps, flush with the footer's bottom edge. */
+}
+
+.site-footer-wordmark:hover {
+  color: var(--yellow);
+}
+
+.site-footer-wordmark:focus-visible {
+  outline-offset: -3px;
+}
+
+@media (max-width: 1040px) {
+  .site-footer-middle {
+    grid-template-columns: minmax(140px, 0.8fr) minmax(240px, 1.3fr) minmax(180px, 1fr);
+    gap: 24px;
+    padding-inline: 0;
+  }
+
+  .site-footer-download {
+    gap: 8px;
+    padding-inline: 18px;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-footer-illustration {
+    height: 220px;
+  }
+
+  .site-footer-illustration img {
+    width: 880px;
+  }
+
+  .site-footer-body {
+    padding: 14px 20px 0;
+  }
+
+  .site-footer-middle {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 34px;
+    padding: 12px 0 32px;
+  }
+
+  .site-footer-navigation,
+  .site-footer-details {
+    align-items: center;
+    text-align: center;
+  }
+
+  .site-footer-navigation ul {
+    margin-top: 8px;
+  }
+
+  .site-footer-navigation a {
+    min-height: 44px;
+  }
+
+  .site-footer-message p {
+    max-width: 36ch;
+    margin: 12px 0 18px;
+  }
+
+  .site-footer-download {
+    width: min(100%, 300px);
+    min-height: 52px;
+  }
+
+  .site-footer-utilities {
+    justify-content: center;
+  }
+
+  .site-footer-meta,
+  .site-footer-boundary {
+    max-width: 36ch;
+  }
+
+  .site-footer-license {
+    min-height: 40px;
+  }
+
+  .site-footer-wordmark {
+    font-size: calc((100vw - 40px) * 0.185);
+  }
+
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "typescribe.fish-benchmark.v1",
+  "samples": [
+    {
+      "id": "swahili-probe-60s",
+      "track": "swahili-english",
+      "purpose": "probe",
+      "file": "C:/path/to/private-benchmark/swahili-probe-60s.wav",
+      "durationSeconds": 60
+    },
+    {
+      "id": "swahili-01",
+      "track": "swahili-english",
+      "purpose": "full",
+      "file": "C:/path/to/private-benchmark/swahili-01.wav",
+      "durationSeconds": 600
+    },
+    {
+      "id": "swahili-02",
+      "track": "swahili-english",
+      "purpose": "full",
+      "file": "C:/path/to/private-benchmark/swahili-02.wav",
+      "durationSeconds": 600
+    },
+    {
+      "id": "swahili-03",
+      "track": "swahili-english",
+      "purpose": "full",
+      "file": "C:/path/to/private-benchmark/swahili-03.wav",
+      "durationSeconds": 600
+    },
+    {
+      "id": "english-difficult-4346818",
+      "track": "english",
+      "purpose": "full",
+      "file": "C:/path/to/private-benchmark/earnings21-4346818.wav",
+      "durationSeconds": 600.126
+    },
+    {
+      "id": "english-technical-4382825",
+      "track": "english",
+      "purpose": "full",
+      "file": "C:/path/to/private-benchmark/earnings21-4382825.wav",
+      "durationSeconds": 600.159
+    },
+    {
+      "id": "english-numbers-4386541",
+      "track": "english",
+      "purpose": "full",
+      "file": "C:/path/to/private-benchmark/earnings21-4386541.wav",
+      "durationSeconds": 599.805
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+# Upload only the public site's build inputs.
+/*
+!package.json
+!package-lock.json
+!vercel.json
+!vite.landing.config.js
+!landing/
+!landing/**
+!scripts/
+scripts/*
+!scripts/build-landing.mjs
+!src/
+src/*
+!src/utils/
+src/utils/*
+!src/utils/transcript.js

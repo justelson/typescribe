@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" fill="none">
+  <title>Typescribe transcript desk footer illustration</title>
+  <defs>
+    <mask id="tape-reel-cutouts">
+      <rect x="-120" y="-120" width="240" height="240" fill="white"/>
+      <circle r="93" fill="none" stroke="black" stroke-width="5"/>
+      <circle r="18" fill="black"/>
+      <g fill="black">
+        <path d="M-15-41c-40-55 43-72 42-32-1 17-22 29-42 32Z"/>
+        <path transform="rotate(120)" d="M-15-41c-40-55 43-72 42-32-1 17-22 29-42 32Z"/>
+        <path transform="rotate(240)" d="M-15-41c-40-55 43-72 42-32-1 17-22 29-42 32Z"/>
+      </g>
+    </mask>
+    <mask id="reel-tape-clearance" maskUnits="userSpaceOnUse" x="0" y="0" width="1600" height="400">
+      <rect width="1600" height="400" fill="white"/>
+      <circle cx="260" cy="224" r="108" fill="black"/>
+    </mask>
+  </defs>
+  <g id="left-analog-tape">
+    <path stroke="#0f4836" stroke-width="38" stroke-linecap="round" d="M-30 240c130 15 110-142 44-135-67 7-18 125 75 165C182 310 200 318 246 310" mask="url(#reel-tape-clearance)"/>
+    <g transform="translate(260 224) rotate(-14)">
+      <circle r="108" fill="#0f4836" mask="url(#tape-reel-cutouts)"/>
+      <g id="reel-mechanics" mask="url(#tape-reel-cutouts)">
+        <g stroke="#f8edcf" fill="none">
+          <circle r="100" stroke-width="2.5"/>
+          <circle r="86" stroke-width="1.5" opacity=".55"/>
+          <circle r="80" stroke-width="1.2" opacity=".32"/>
+          <circle r="26" stroke-width="3"/>
+          <circle r="33" stroke-width="1.2" opacity=".55"/>
+          <g stroke-width="2" stroke-linejoin="round" opacity=".8">
+            <path d="M-15-41c-40-55 43-72 42-32-1 17-22 29-42 32Z"/>
+            <path transform="rotate(120)" d="M-15-41c-40-55 43-72 42-32-1 17-22 29-42 32Z"/>
+            <path transform="rotate(240)" d="M-15-41c-40-55 43-72 42-32-1 17-22 29-42 32Z"/>
+          </g>
+        </g>
+        <g fill="#f8edcf">
+          <circle cy="58" r="3"/>
+          <circle transform="rotate(120)" cy="58" r="3"/>
+          <circle transform="rotate(240)" cy="58" r="3"/>
+        </g>
+        <g stroke="#f6c943" stroke-width="1.5" stroke-linecap="round">
+          <path d="M-1.5 58h3"/>
+          <path transform="rotate(120)" d="M-1.5 58h3"/>
+          <path transform="rotate(240)" d="M-1.5 58h3"/>
+        </g>
+      </g>
+    </g>
+    <path id="left-tape-curl" fill="#0f4836" d="M337 268C399 218 462 204 499 228C523 247 530 295 526 353H496C505 303 493 262 476 251C449 237 399 260 352 290Z" mask="url(#reel-tape-clearance)"/>
+  </g>
+  <g id="right-paper-ribbons">
+    <path stroke="#0f4836" stroke-width="40" stroke-linecap="round" d="M1618 274c-119-27-72-147-21-138 53 10 16 116-75 144l-133 48"/>
+    <g stroke="#0f4836" stroke-width="10" stroke-linejoin="round">
+      <path fill="#f8edcf" transform="rotate(-19 1340 325)" d="M1265 135h150v230h-150Z"/>
+      <path fill="#f8edcf" transform="rotate(17 1340 325)" d="M1265 140h150v225h-150Z"/>
+      <path fill="#f8edcf" d="M1265 127h110l40 40v198h-150Z"/>
+      <path d="M1375 128v39h39"/>
+      <path stroke-width="8" stroke-linecap="round" d="M1292 206h95m-95 28h95m-95 28h68"/>
+    </g>
+    <path id="right-tape-curl" fill="#0f4836" d="M976 272C1044 251 1119 237 1173 265C1196 287 1207 320 1218 346H1183C1177 320 1168 288 1142 281C1098 259 1047 289 976 312Z"/>
+  </g>
+  <g id="transcript-sheet">
+    <path fill="#f8edcf" d="M618 83q0-18 18-18h278l66 66v204H618V83Z"/>
+    <path fill="#f8edcf" d="M914 65v48q0 18 18 18h48z"/>
+    <path stroke="#0f4836" stroke-width="10" stroke-linejoin="round" d="M618 83q0-18 18-18h278l66 66v204H618V83Z"/>
+    <path stroke="#0f4836" stroke-width="8" stroke-linejoin="round" d="M946 131h33"/>
+    <g id="face" stroke="#0f4836" stroke-linecap="round">
+      <path stroke-width="8" d="M710 214q18-18 37 0m59 0q18-18 37 0"/>
+      <path stroke-width="7" d="M762 243q14 12 28 0"/>
+      <path stroke-width="7" d="M705 274h78m-78 19h126m-126 19h94"/>
+    </g>
+  </g>
+  <g id="pencil" transform="rotate(12 1000 128)" stroke="#0f4836" stroke-width="8" stroke-linejoin="round">
+    <path fill="#f8edcf" d="M978 34h44v157h-44z"/>
+    <path fill="#f8edcf" d="m978 191 22 37 22-37z"/>
+    <path fill="#0f4836" d="m991 213 9 15 9-15z"/>
+    <path fill="#f6c943" d="M978 35h44v21h-44z"/>
+    <path stroke-width="5" d="M1000 59v131"/>
+  </g>
+  <g id="headphones" stroke="#0f4836" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path id="headband" d="M600 179V65Q600 25 642 25C739 13 867 22 935 66Q975 91 978 179"/>
+    <path id="left-earcup" fill="#0f4836" stroke="none" d="M600 166Q584 166 584 183V260Q584 277 600 277L650 266V178Z"/>
+    <path id="right-earcup" fill="#0f4836" stroke="none" d="M980 166Q998 166 998 184V259Q998 277 980 277L932 266V178Z"/>
+  </g>
+  <g id="resting-hands" fill="#f8edcf" stroke="#0f4836" stroke-width="8" stroke-linejoin="round">
+    <path d="M634 319q-10-6-20 1l-24 17q-8 6-2 14l18 17q8 7 21 4l29-8v-32l-22-13Z"/>
+    <path d="M966 319q10-6 20 1l24 17q8 6-2 14l-18 17q-8 7-21 4l-29-8v-32l22-13Z"/>
+  </g>
+  <g id="footer-base"><path fill="#0f4836" d="M0 330h1600v70H0z"/></g>
+</svg>

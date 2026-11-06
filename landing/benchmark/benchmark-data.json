@@ -1,0 +1,630 @@
+{
+  "schema": "typescribe.transcriptbench.public.v2",
+  "version": "2.0.0-setup",
+  "updated": "October 7, 2026",
+  "status": "published",
+  "corpus": {
+    "durationMinutes": 30,
+    "acceptedBlocks": 96,
+    "languages": [
+      "Swahili",
+      "English"
+    ],
+    "trials": [
+      {
+        "id": "trial-01",
+        "window": "00:20:00–00:30:00",
+        "durationMinutes": 10,
+        "acceptedBlocks": 47,
+        "confidence": {
+          "high": 24,
+          "medium": 23,
+          "low": 0
+        },
+        "audioSizeMb": 19.2
+      },
+      {
+        "id": "trial-02",
+        "window": "00:30:00–00:40:00",
+        "durationMinutes": 10,
+        "acceptedBlocks": 26,
+        "confidence": {
+          "high": 12,
+          "medium": 12,
+          "low": 2
+        },
+        "audioSizeMb": 19.2
+      },
+      {
+        "id": "trial-03",
+        "window": "00:40:00–00:50:00",
+        "durationMinutes": 10,
+        "acceptedBlocks": 23,
+        "confidence": {
+          "high": 23,
+          "medium": 0,
+          "low": 0
+        },
+        "audioSizeMb": 19.2
+      }
+    ]
+  },
+  "costs": {
+    "supportedMatrixUsd": 0.5805,
+    "eligibilityProbesUsd": 0.0207
+  },
+  "models": [
+    {
+      "id": "deepgram-nova-3-latest",
+      "label": "Deepgram Nova-3",
+      "provider": "Deepgram",
+      "apiModel": "nova-3",
+      "policy": "probe",
+      "coverageMinutes": 1,
+      "languageSupport": "unsupported",
+      "cost30MinutesUsd": 0.15599952879333331,
+      "score": null,
+      "family": "Deepgram",
+      "familyOrder": 1,
+      "metrics": {
+        "wordAccuracy": null,
+        "englishAccuracy": 78.31632653061224,
+        "swahiliAccuracy": null,
+        "qualityScore": null,
+        "gateScore": null,
+        "typeScribeScore": null,
+        "wer": null,
+        "englishWer": 21.683673469387756,
+        "swahiliWer": null
+      },
+      "trackResults": {
+        "english": {
+          "coverageMinutes": 30,
+          "score": {
+            "value": 64.9935,
+            "display": "65.0",
+            "confidenceLow": 60.288,
+            "confidenceHigh": 73.1113,
+            "rank": 10
+          },
+          "metrics": {
+            "wordAccuracy": 78.31632653061224,
+            "wer": 21.683673469387756,
+            "qualityScore": 77.37325987522458,
+            "gateScore": 20,
+            "typeScribeScore": 64.99353829518866
+          }
+        },
+        "swahiliEnglish": null
+      }
+    },
+    {
+      "id": "elevenlabs-scribe-v2",
+      "label": "ElevenLabs Scribe v2",
+      "provider": "ElevenLabs",
+      "apiModel": "scribe_v2",
+      "policy": "full",
+      "coverageMinutes": 30,
+      "languageSupport": "supported",
+      "cost30MinutesUsd": 0.10999966873888586,
+      "score": {
+        "value": 67.0635,
+        "display": "67.1",
+        "confidenceLow": 65.3761,
+        "confidenceHigh": 70.0966,
+        "rank": 1
+      },
+      "family": "ElevenLabs",
+      "familyOrder": 1,
+      "metrics": {
+        "wordAccuracy": 75.51051586146846,
+        "englishAccuracy": 87.32339089481947,
+        "swahiliAccuracy": 63.69764082811747,
+        "qualityScore": 75.4481604369825,
+        "gateScore": 40,
+        "typeScribeScore": 67.06348380674956,
+        "wer": 24.489484138531537,
+        "englishWer": 12.676609105180534,
+        "swahiliWer": 36.30235917188253
+      },
+      "trackResults": {
+        "english": {
+          "coverageMinutes": 30,
+          "score": {
+            "value": 80.4595,
+            "display": "80.5",
+            "confidenceLow": 78.7961,
+            "confidenceHigh": 81.9927,
+            "rank": 1
+          },
+          "metrics": {
+            "wordAccuracy": 87.32339089481947,
+            "wer": 12.676609105180534,
+            "qualityScore": 83.81194321454441,
+            "gateScore": 80,
+            "typeScribeScore": 80.45946548596264
+          }
+        },
+        "swahiliEnglish": {
+          "coverageMinutes": 30,
+          "score": {
+            "value": 53.6675,
+            "display": "53.7",
+            "confidenceLow": 50.753,
+            "confidenceHigh": 59.5025,
+            "rank": 1
+          },
+          "metrics": {
+            "wordAccuracy": 63.69764082811747,
+            "wer": 36.30235917188253,
+            "qualityScore": 67.0843776594206,
+            "gateScore": 0,
+            "typeScribeScore": 53.66750212753648
+          }
+        }
+      }
+    },
+    {
+      "id": "speechmatics-enhanced-sw",
+      "label": "Speechmatics Enhanced",
+      "provider": "Speechmatics",
+      "apiModel": "enhanced",
+      "policy": "full",
+      "coverageMinutes": 30,
+      "languageSupport": "supported",
+      "cost30MinutesUsd": 0.19999939688888585,
+      "score": {
+        "value": 62.128,
+        "display": "62.1",
+        "confidenceLow": 58.3327,
+        "confidenceHigh": 63.9871,
+        "rank": 2
+      },
+      "family": "Speechmatics",
+      "familyOrder": 2,
+      "metrics": {
+        "wordAccuracy": 66.25890273149369,
+        "englishAccuracy": 85.47880690737833,
+        "swahiliAccuracy": 47.03899855560905,
+        "qualityScore": 66.92294626761858,
+        "gateScore": 50,
+        "typeScribeScore": 62.12802912980548,
+        "wer": 33.74109726850631,
+        "englishWer": 14.521193092621665,
+        "swahiliWer": 52.96100144439095
+      },
+      "trackResults": {
+        "english": {
+          "coverageMinutes": 30,
+          "score": {
+            "value": 85.8967,
+            "display": "85.9",
+            "confidenceLow": 78.0772,
+            "confidenceHigh": 87.5905,
+            "rank": 1
+          },
+          "metrics": {
+            "wordAccuracy": 85.47880690737833,
+            "wer": 14.521193092621665,
+            "qualityScore": 85.89672115710611,
+            "gateScore": 100,
+            "typeScribeScore": 85.89672115710611
+          }
+        },
+        "swahiliEnglish": {
+          "coverageMinutes": 30,
+          "score": {
+            "value": 38.3593,
+            "display": "38.4",
+            "confidenceLow": 35.1156,
+            "confidenceHigh": 41.6388,
+            "rank": 2
+          },
+          "metrics": {
+            "wordAccuracy": 47.03899855560905,
+            "wer": 52.96100144439095,
+            "qualityScore": 47.949171378131055,
+            "gateScore": 0,
+            "typeScribeScore": 38.359337102504846
+          }
+        }
+      }
+    },
+    {
+      "id": "speechmatics-standard-sw",
+      "label": "Speechmatics Standard",
+      "provider": "Speechmatics",
+      "apiModel": "standard",
+      "policy": "full",
+      "coverageMinutes": 30,
+      "languageSupport": "supported",
+      "cost30MinutesUsd": 0.11999963753333334,
+      "score": {
+        "value": 61.1475,
+        "display": "61.1",
+        "confidenceLow": 56.7788,
+        "confidenceHigh": 63.0512,
+        "rank": 2
+      },
+      "family": "Speechmatics",
+      "familyOrder": 1,
+      "metrics": {
+        "wordAccuracy": 65.17458914975938,
+        "englishAccuracy": 84.850863422292,
+        "swahiliAccuracy": 45.49831487722676,
+        "qualityScore": 65.75932355463874,
+        "gateScore": 50,
+        "typeScribeScore": 61.14749739212099,
+        "wer": 34.825410850240615,
+        "englishWer": 15.149136577708006,
+        "swahiliWer": 54.50168512277324
+      },
+      "trackResults": {
+        "english": {
+          "coverageMinutes": 30,
+          "score": {
+            "value": 85.4004,
+            "display": "85.4",
+            "confidenceLow": 77.0393,
+            "confidenceHigh": 87.1083,
+            "rank": 1
+          },
+          "metrics": {
+            "wordAccuracy": 84.850863422292,
+            "wer": 15.149136577708006,
+            "qualityScore": 85.40038548409994,
+            "gateScore": 100,
+            "typeScribeScore": 85.40038548409994
+          }
+        },
+        "swahiliEnglish": {
+          "coverageMinutes": 30,
+          "score": {
+            "value": 36.8946,
+            "display": "36.9",
+            "confidenceLow": 33.4681,
+            "confidenceHigh": 40.3519,
+            "rank": 2
+          },
+          "metrics": {
+            "wordAccuracy": 45.49831487722676,
+            "wer": 54.50168512277324,
+            "qualityScore": 46.118261625177546,
+            "gateScore": 0,
+            "typeScribeScore": 36.89460930014204
+          }
+        }
+      }
+    },
+    {
+      "id": "assemblyai-universal-3-5-pro",
+      "label": "AssemblyAI Universal-3.5 Pro",
+      "provider": "AssemblyAI",
+      "apiModel": "universal-3-5-pro",
+      "policy": "probe",
+      "coverageMinutes": 1,
+      "languageSupport": "unsupported",
+      "cost30MinutesUsd": 0.10499968284166666,
+      "score": null,
+      "family": "AssemblyAI",
+      "familyOrder": 3.5,
+      "metrics": {
+        "wordAccuracy": null,
+        "englishAccuracy": 85.3021978021978,
+        "swahiliAccuracy": null,
+        "qualityScore": null,
+        "gateScore": null,
+        "typeScribeScore": null,
+        "wer": null,
+        "englishWer": 14.697802197802199,
+        "swahiliWer": null
+      },
+      "trackResults": {
+        "english": {
+          "coverageMinutes": 30,
+          "score": {
+            "value": 86.1245,
+            "display": "86.1",
+            "confidenceLow": 81.1396,
+            "confidenceHigh": 87.8216,
+            "rank": 1
+          },
+          "metrics": {
+            "wordAccuracy": 85.3021978021978,
+            "wer": 14.697802197802199,
+            "qualityScore": 86.12451707988727,
+            "gateScore": 100,
+            "typeScribeScore": 86.12451707988727
+          }
+        },
+        "swahiliEnglish": null
+      }
+    },
+    {
+      "id": "assemblyai-universal-2",
+      "label": "AssemblyAI Universal-2",
+      "provider": "AssemblyAI",
+      "apiModel": "universal-2",
+      "policy": "full",
+      "coverageMinutes": 30,
+      "languageSupport": "supported",
+      "cost30MinutesUsd": 0.07499977345833334,
+      "score": {
+        "value": 48.1814,
+        "display": "48.2",
+        "confidenceLow": 44.713,
+        "confidenceHigh": 49.5724,
+        "rank": 5
+      },
+      "family": "AssemblyAI",
+      "familyOrder": 2,
+      "metrics": {
+        "wordAccuracy": 49.88527446829256,
+        "englishAccuracy": 84.02668759811617,
+        "swahiliAccuracy": 15.743861338468946,
+        "qualityScore": 49.65565343526723,
+        "gateScore": 50,
+        "typeScribeScore": 48.181365104538536,
+        "wer": 50.11472553170744,
+        "englishWer": 15.97331240188383,
+        "swahiliWer": 84.25613866153105
+      },
+      "trackResults": {
+        "english": {
+          "coverageMinutes": 30,
+          "score": {
+            "value": 84.5684,
+            "display": "84.6",
+            "confidenceLow": 77.4069,
+            "confidenceHigh": 86.1667,
+            "rank": 1
+          },
+          "metrics": {
+            "wordAccuracy": 84.02668759811617,
+            "wer": 15.97331240188383,
+            "qualityScore": 84.56842356324745,
+            "gateScore": 100,
+            "typeScribeScore": 84.56842356324745
+          }
+        },
+        "swahiliEnglish": {
+          "coverageMinutes": 30,
+          "score": {
+            "value": 11.7943,
+            "display": "11.8",
+            "confidenceLow": 9.2587,
+            "confidenceHigh": 14.2722,
+            "rank": 5
+          },
+          "metrics": {
+            "wordAccuracy": 15.743861338468946,
+            "wer": 84.25613866153105,
+            "qualityScore": 14.742883307287022,
+            "gateScore": 0,
+            "typeScribeScore": 11.794306645829618
+          }
+        }
+      }
+    },
+    {
+      "id": "groq-whisper-large-v3",
+      "label": "Groq Whisper Large v3",
+      "provider": "Groq",
+      "apiModel": "whisper-large-v3",
+      "policy": "full",
+      "coverageMinutes": 30,
+      "languageSupport": "supported",
+      "cost30MinutesUsd": 0.05549983235916667,
+      "score": {
+        "value": 50.7688,
+        "display": "50.8",
+        "confidenceLow": 47.3995,
+        "confidenceHigh": 52.3545,
+        "rank": 4
+      },
+      "family": "Groq",
+      "familyOrder": 3,
+      "metrics": {
+        "wordAccuracy": 52.29004178983544,
+        "englishAccuracy": 82.45682888540031,
+        "swahiliAccuracy": 22.12325469427057,
+        "qualityScore": 52.97679952084574,
+        "gateScore": 50,
+        "typeScribeScore": 50.768803250047334,
+        "wer": 47.70995821016456,
+        "englishWer": 17.543171114599687,
+        "swahiliWer": 77.87674530572943
+      },
+      "trackResults": {
+        "english": {
+          "coverageMinutes": 30,
+          "score": {
+            "value": 83.8736,
+            "display": "83.9",
+            "confidenceLow": 78.7281,
+            "confidenceHigh": 85.5541,
+            "rank": 1
+          },
+          "metrics": {
+            "wordAccuracy": 82.45682888540031,
+            "wer": 17.543171114599687,
+            "qualityScore": 83.87363633370744,
+            "gateScore": 100,
+            "typeScribeScore": 83.87363633370744
+          }
+        },
+        "swahiliEnglish": {
+          "coverageMinutes": 30,
+          "score": {
+            "value": 17.664,
+            "display": "17.7",
+            "confidenceLow": 14.4737,
+            "confidenceHigh": 20.4835,
+            "rank": 4
+          },
+          "metrics": {
+            "wordAccuracy": 22.12325469427057,
+            "wer": 77.87674530572943,
+            "qualityScore": 22.07996270798404,
+            "gateScore": 0,
+            "typeScribeScore": 17.663970166387234
+          }
+        }
+      }
+    },
+    {
+      "id": "groq-whisper-large-v3-turbo",
+      "label": "Groq Whisper Large v3 Turbo",
+      "provider": "Groq",
+      "apiModel": "whisper-large-v3-turbo",
+      "policy": "full",
+      "coverageMinutes": 30,
+      "languageSupport": "supported",
+      "cost30MinutesUsd": 0.019999940588885868,
+      "score": {
+        "value": 46.9596,
+        "display": "47.0",
+        "confidenceLow": 43.4573,
+        "confidenceHigh": 48.5074,
+        "rank": 5
+      },
+      "family": "Groq",
+      "familyOrder": 3.1,
+      "metrics": {
+        "wordAccuracy": 47.778034864921864,
+        "englishAccuracy": 82.1232339089482,
+        "swahiliAccuracy": 13.432835820895534,
+        "qualityScore": 48.26287100475062,
+        "gateScore": 50,
+        "typeScribeScore": 46.95964024485386,
+        "wer": 52.221965135078136,
+        "englishWer": 17.876766091051806,
+        "swahiliWer": 86.56716417910447
+      },
+      "trackResults": {
+        "english": {
+          "coverageMinutes": 30,
+          "score": {
+            "value": 83.4934,
+            "display": "83.5",
+            "confidenceLow": 78.0416,
+            "confidenceHigh": 85.1835,
+            "rank": 1
+          },
+          "metrics": {
+            "wordAccuracy": 82.1232339089482,
+            "wer": 17.876766091051806,
+            "qualityScore": 83.49343441053364,
+            "gateScore": 100,
+            "typeScribeScore": 83.49343441053364
+          }
+        },
+        "swahiliEnglish": {
+          "coverageMinutes": 30,
+          "score": {
+            "value": 10.4258,
+            "display": "10.4",
+            "confidenceLow": 7.6897,
+            "confidenceHigh": 13.0001,
+            "rank": 5
+          },
+          "metrics": {
+            "wordAccuracy": 13.432835820895534,
+            "wer": 86.56716417910447,
+            "qualityScore": 13.032307598967606,
+            "gateScore": 0,
+            "typeScribeScore": 10.425846079174086
+          }
+        }
+      }
+    },
+    {
+      "id": "fish-audio-transcribe-1",
+      "label": "Fish Audio Transcribe-1",
+      "provider": "Fish Audio",
+      "apiModel": "transcribe-1",
+      "policy": "probe",
+      "coverageMinutes": 1,
+      "languageSupport": "unsupported",
+      "cost30MinutesUsd": 0.1799994563,
+      "score": null,
+      "family": "Fish Audio",
+      "familyOrder": 1,
+      "metrics": {
+        "wordAccuracy": null,
+        "englishAccuracy": 84.81161695447409,
+        "swahiliAccuracy": null,
+        "qualityScore": null,
+        "gateScore": null,
+        "typeScribeScore": null,
+        "wer": null,
+        "englishWer": 15.188383045525903,
+        "swahiliWer": null
+      },
+      "trackResults": {
+        "english": {
+          "coverageMinutes": 30,
+          "score": {
+            "value": 85.4143,
+            "display": "85.4",
+            "confidenceLow": 80.164,
+            "confidenceHigh": 86.9563,
+            "rank": 1
+          },
+          "metrics": {
+            "wordAccuracy": 84.81161695447409,
+            "wer": 15.188383045525903,
+            "qualityScore": 85.414273009349,
+            "gateScore": 100,
+            "typeScribeScore": 85.414273009349
+          }
+        },
+        "swahiliEnglish": null
+      }
+    },
+    {
+      "id": "fish-audio-transcribe-1-pro",
+      "label": "Fish Audio Transcribe-1 Pro",
+      "provider": "Fish Audio",
+      "apiModel": "transcribe-1-pro",
+      "policy": "probe",
+      "coverageMinutes": 1,
+      "languageSupport": "unsupported",
+      "cost30MinutesUsd": 0.1799994563,
+      "score": null,
+      "family": "Fish Audio",
+      "familyOrder": 1,
+      "metrics": {
+        "wordAccuracy": null,
+        "englishAccuracy": 89.71742543171115,
+        "swahiliAccuracy": null,
+        "qualityScore": null,
+        "gateScore": null,
+        "typeScribeScore": null,
+        "wer": null,
+        "englishWer": 10.282574568288853,
+        "swahiliWer": null
+      },
+      "trackResults": {
+        "english": {
+          "coverageMinutes": 30,
+          "score": {
+            "value": 89.5481,
+            "display": "89.5",
+            "confidenceLow": 85.2346,
+            "confidenceHigh": 90.979,
+            "rank": 1
+          },
+          "metrics": {
+            "wordAccuracy": 89.71742543171115,
+            "wer": 10.282574568288853,
+            "qualityScore": 89.54806625267187,
+            "gateScore": 100,
+            "typeScribeScore": 89.54806625267187
+          }
+        },
+        "swahiliEnglish": null
+      }
+    }
+  ]
+}

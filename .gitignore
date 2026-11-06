@@ -22,6 +22,8 @@ yarn-error.log*
 !.env.example
 
 # Local app data / generated exports
+# Complete local benchmark workspace, including private corpora and credentials
+/benchmarks/
 *.tmp
 *.temp
 tmp/
@@ -45,5 +47,13 @@ Thumbs.db
 # Coordination handoffs
 .coord/
 
+# Local agent state and Vercel project links
+.claude/
+.zyra/
+.vercel/
+NUL
+
 # Misc
 *.tsbuildinfo
+
+.vercel

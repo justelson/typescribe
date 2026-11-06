@@ -91,6 +91,8 @@ Add your Deepgram key to `.env`:
 DEEPGRAM_API_KEY=your_key_here
 ```
 
+For Fish Audio benchmark captures, set `FISH_API_KEY` in `benchmarks/transcriptbench-v1/.env` inside this checkout. The complete local benchmark workspace is excluded from Git because it includes private audio, captures and credentials. The private runner and manifest instructions are in [Fish Audio benchmark capture](./docs/FISH-AUDIO-BENCHMARK.md). This does not change the editor's Deepgram transcription flow.
+
 Run the web app and local API in two terminals:
 
 ```bash
@@ -112,6 +114,18 @@ npm run build
 npm run build:landing
 ```
 
+Run the React landing site, benchmark, and release archive locally:
+
+```bash
+npm run dev:landing
+```
+
+Preview the production landing build with `npm run preview:landing`.
+
+Open `http://127.0.0.1:8780/` for the product landing page, `/benchmark/` for TypeScribe Bench, or `/downloads/` for the release archive and platform downloads.
+
+Vercel uses the root `vercel.json` to run `npm run build:landing` and serve only `dist-landing/`. The CLI upload allowlist in `.vercelignore` includes the website's build inputs and excludes local benchmark data, credentials, and desktop sources. No transcription API keys are needed for the website.
+
 Package a Windows build:
 
 ```bash
@@ -129,6 +143,7 @@ Environment variables:
 | `DEEPGRAM_API_KEY` / `DG_API_KEY` | Deepgram authentication token. |
 | `DEEPGRAM_MODEL` | Deepgram model. Defaults to `whisper-large`. |
 | `DEEPGRAM_LANGUAGE` | Optional fixed language. Use `auto`/unset for detection. |
+| `FISH_API_KEY` | Optional Fish Audio key for the private benchmark capture script only. |
 | `PORT` | Local Express/Electron server port. Defaults to `4177`. |
 | `TYPESCRIBE_MEDIA_DIR` | Optional local folder for audio clip export source files. |
 
@@ -138,23 +153,25 @@ Environment variables:
 electron/        Electron main/preload desktop shell
 server/          Local Express API and Deepgram transcription bridge
 src/             React app, editor components, transcript utilities
-landing/         Static OSS landing page source
+landing/         React + Tailwind OSS site, benchmark, and release archive
 docs/            Architecture and release notes
 scripts/         Build/release helper scripts
 ```
 
 ## Privacy
 
-TypeScribe is local-first, but transcription sends the selected media file to Deepgram when you run transcription. Do not commit private audio, transcripts, `.env`, exported documents, Electron local storage, or generated logs.
+TypeScribe is local-first, but transcription sends the selected media file to Deepgram when you run transcription. The Fish benchmark CLI sends its selected audio files to Fish Audio only when you pass `--execute`. Do not commit private audio, transcripts, benchmark captures, `.env`, exported documents, Electron local storage, or generated logs.
 
 Local storage keys currently retain the early `deepgram-scribe:*` names for compatibility with existing local drafts.
 
 ## Documentation
 
-- [Architecture](./docs/ARCHITECTURE.md)
+- [Application architecture](./docs/ARCHITECTURE.md)
+- [Landing-site architecture](./docs/LANDING-ARCHITECTURE.md)
 - [Release checklist](./docs/RELEASE.md)
 - [Contributing](./CONTRIBUTING.md)
 - [Security](./SECURITY.md)
+- [Fish Audio benchmark capture](./docs/FISH-AUDIO-BENCHMARK.md)
 
 ## License
 

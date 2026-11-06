@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="360" viewBox="0 0 1600 360" fill="none">
+  <g id="left-paper-stack" stroke="#0f4836" stroke-width="5" stroke-linejoin="round">
+    <path fill="#f3dfb5" d="M-42 242q46-28 104-20l192 23q26 4 39 27l20 88H-42Z"/>
+    <path fill="#f8edcf" d="M-30 278q53-28 110-20l188 24q21 3 36 24l10 54H-30Z"/>
+    <path fill="#f3dfb5" d="M-22 316q48-19 104-13l188 18q28 3 40 22v17H-22Z"/>
+    <path d="M19 293q38-13 79-9m-70 25q38-13 82-8" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g id="folded-corner-sheet" stroke="#0f4836" stroke-width="5" stroke-linejoin="round">
+    <path fill="#f8edcf" d="M207 360v-59q0-13 13-11l100 13v57Z"/>
+    <path fill="#f3dfb5" d="M294 301l26 3v25q-1 10-12 8l-14-2Z"/>
+    <path d="M294 301v25q0 10 14 11"/>
+  </g>
+  <g id="loose-tape-ribbon" stroke="#0f4836" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path fill="#f6c943" d="M267 276c54-20 102-20 135-2 23 13 30 36 19 50-12 14-34 12-54-5-15-13-32-17-52-12"/>
+    <path d="M263 279c54-20 102-20 135-2 23 13 30 36 19 50-12 14-34 12-54-5-15-13-32-17-52-12"/>
+    <path d="M265 275l-10 7 10 6m155 36 10 6-10 4" fill="#f8edcf"/>
+  </g>
+  <g id="right-paper-stack" stroke="#0f4836" stroke-width="5" stroke-linejoin="round">
+    <path fill="#f3dfb5" d="M1289 360q13-77 48-96 20-12 49-4l237 35v65Z"/>
+    <path fill="#f8edcf" d="M1307 360q10-66 45-83 21-10 46-4l225 32v55Z"/>
+    <path fill="#f3dfb5" d="M1340 360q12-46 42-58 17-7 40-2l201 28v32Z"/>
+    <path d="M1394 310l132 19m-139-2 102 15" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g id="right-folded-corner" stroke="#0f4836" stroke-width="5" stroke-linejoin="round">
+    <path fill="#f8edcf" d="M1546 251l54 8v101h-72v-89q0-22 18-20Z"/>
+    <path fill="#f3dfb5" d="M1546 251v22q0 12 13 14l41 6"/>
+  </g>
+  <g id="spare-pencil" stroke="#0f4836" stroke-width="5" stroke-linejoin="round">
+    <path fill="#f8edcf" d="M1450 198l19-5 35 126-19 6Z"/>
+    <path fill="#f6c943" d="M1450 198l19-5 7 24-19 5Z"/>
+    <path fill="#f3dfb5" d="M1485 325l-3 24 17-18Z"/>
+    <path fill="#0f4836" stroke="none" d="M1482 349l5-12 12-6Z"/>
+  </g>
+  <g id="bottom-desk-paper-edge" stroke="#0f4836" stroke-width="5" stroke-linejoin="round">
+    <path fill="#f8edcf" d="M372 360q31-26 68-18l84 10 91-9q45-4 83 17H372Z"/>
+    <path fill="#f3dfb5" d="M1032 360q40-27 87-17l79 12q38 6 67-5l50-10q43-8 77 20Z"/>
+  </g>
+  <g id="small-pink-paper-tab" stroke="#0f4836" stroke-width="4" stroke-linejoin="round">
+    <path fill="#f2a3b8" d="M1322 282l39 6-5 24-39-6Z"/>
+  </g>
+</svg>

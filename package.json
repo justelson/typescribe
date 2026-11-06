@@ -33,10 +33,14 @@
     "build": "vite build",
     "build:landing": "node scripts/build-landing.mjs",
     "preview": "vite preview --host 127.0.0.1",
-    "check": "node --check server/index.js && node --check electron/main.mjs && node --check electron/preload.mjs && node --check scripts/build-landing.mjs && vite build",
+    "check": "node --check server/index.js && node --check electron/main.mjs && node --check electron/preload.mjs && node --check scripts/build-landing.mjs && node --check scripts/benchmark-fish-audio.mjs && node --check scripts/lib/fish-benchmark-core.mjs && node --check vite.landing.config.js && npm run test:landing && npm run test:benchmark && npm run build:landing && vite build",
     "package:dir": "npm run build && electron-builder --dir",
     "package:win": "npm run build && electron-builder --win nsis",
-    "release:notes": "node scripts/generate-release-notes.mjs"
+    "release:notes": "node scripts/generate-release-notes.mjs",
+    "dev:landing": "vite --config vite.landing.config.js",
+    "preview:landing": "vite preview --config vite.landing.config.js",
+    "test:landing": "node --test tests/landing/*.test.mjs",
+    "test:benchmark": "node --test tests/benchmark/*.test.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
@@ -45,11 +49,17 @@
     "multer": "^2.1.1",
     "react": "latest",
     "react-dom": "latest",
-    "vite": "latest"
+    "vite": "latest",
+    "lenis": "1.3.26",
+    "react-router-dom": "^7.18.4"
   },
   "devDependencies": {
     "electron": "^41.3.0",
-    "electron-builder": "^25.1.8"
+    "electron-builder": "^25.1.8",
+    "@resvg/resvg-js": "^2.6.2",
+    "@tailwindcss/vite": "^4.3.3",
+    "jsdom": "^26.1.0",
+    "tailwindcss": "^4.3.3"
   },
   "build": {
     "appId": "com.justelson.typescribe",

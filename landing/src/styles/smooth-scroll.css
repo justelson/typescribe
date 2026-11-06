@@ -1,0 +1,6 @@
+@import 'lenis/dist/lenis.css';
+
+/* Menu locking must still permit native router/history scroll restoration. */
+html.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: hidden;
+}
